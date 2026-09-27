@@ -16,7 +16,7 @@ If the page is blank, the browser blocked the map library. Open the file again o
 
 ## Filter
 
-The chips across the top filter the pins by activity: breakfast, coffee, restaurant, outdoors, and museum. **Spots** opens the same list. **Lines** opens the subway color key. Tap the title to zoom back out to the whole city.
+The chips across the top filter the pins by activity: breakfast, coffee, restaurant, outdoors, and museum. **Spots** opens the same list. **Lines** opens the subway color key. **Neighborhoods** shows or hides the Manhattan neighborhood areas. Tap the title to zoom back out to the whole city.
 
 ## Add your own places
 
@@ -38,6 +38,7 @@ The sample pins are there so the map is usable before you add real plans. Edit t
 
 ## What the overlays are
 
-- Borough outlines are the five New York City boroughs, from NYC Department of City Planning boundaries.
+- Manhattan neighborhoods are colored areas with names. The names appear as you zoom in. **Neighborhoods** turns them on and off, and the phone remembers your choice. Boundaries come from the Pediacities neighborhood map, via [custom-nyc-neighborhoods](https://github.com/HodgesWardElliott/custom-nyc-neighborhoods). A few smaller areas, such as Hudson Yards, Yorkville, and Lincoln Square, are grouped under the larger neighborhood around them.
+- Borough outlines are thin lines around the five boroughs, from NYC Department of City Planning boundaries.
 - Subway lines are the city’s subway centerlines, colored with the MTA trunk colors (red for the 1 2 3, green for the 4 5 6, and so on). Shared tracks draw those colors side by side when you zoom in.
 - The street map comes from [OpenFreeMap](https://openfreemap.org), which is free and needs no key. Map data is © OpenStreetMap contributors. If a phone can’t draw that map, the page falls back to the standard OpenStreetMap tiles, shown in muted colors.
