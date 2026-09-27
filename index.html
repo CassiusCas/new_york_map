@@ -21,6 +21,8 @@
   html, body {
     margin: 0;
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     background: var(--paper);
     color: var(--ink);
     font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
@@ -74,8 +76,8 @@
     gap: 8px;
     overflow-x: auto;
     scrollbar-width: none;
-    margin: 0 -14px;
-    padding: 0 14px 2px;
+    margin: 0;
+    padding: 0 0 2px;
   }
   #filters::-webkit-scrollbar { display: none; }
   .chip {
@@ -215,22 +217,38 @@
   }
   #sheet {
     position: absolute;
-    z-index: 600;
+    z-index: 800;
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     pointer-events: none;
   }
   .sheet-card {
     width: min(520px, 100%);
+    max-width: 100%;
     max-height: min(72dvh, 640px);
     overflow: auto;
     background: var(--card);
     border-radius: 18px 18px 0 0;
     box-shadow: 0 -8px 30px rgba(36, 28, 22, 0.18);
     padding: 8px 16px calc(16px + env(safe-area-inset-bottom));
+  }
+  .close-bar {
+    display: block;
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--ink);
+    color: #fff;
+    font: 650 16px/1 "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    cursor: pointer;
+    touch-action: manipulation;
   }
   .grab {
     width: 36px;
@@ -927,11 +945,11 @@ if (!window.L) {
           <p class="eyebrow"><span class="pill" style="--c:${meta.color};--on:${meta.ink}">${escapeHtml(meta.label)}</span></p>
           <h2 id="sheetTitle">${escapeHtml(place.name)}</h2>
         </div>
-        <button type="button" class="icon-btn" data-close>Close</button>
       </div>
       <p class="area">${escapeHtml(place.area)}</p>
       <p class="note">${escapeHtml(place.note)}</p>
-      <p class="addr">${escapeHtml(place.address)}</p>`;
+      <p class="addr">${escapeHtml(place.address)}</p>
+      <button type="button" class="close-bar" data-close>Close</button>`;
   }
   function openPlace(id, fly) {
     const place = PLACES[id];
@@ -941,8 +959,11 @@ if (!window.L) {
     renderPins();
     showSheet("place", placeHtml(place));
     const zoom = Math.max(map.getZoom(), 15);
-    if (fly) map.flyTo([place.lat, place.lng], zoom, { duration: 0.55 });
-    else map.panTo([place.lat, place.lng]);
+    const point = map.project([place.lat, place.lng], zoom);
+    point.y += (sheetEl.offsetHeight || 220) / 2;
+    const target = map.unproject(point, zoom);
+    if (fly) map.flyTo(target, zoom, { duration: 0.5 });
+    else map.setView(target, Math.max(map.getZoom(), 14), { animate: true });
   }
   function openSubway(route, color) {
     selected = null;
@@ -957,9 +978,9 @@ if (!window.L) {
           <p class="eyebrow">${pills}</p>
           <h2 id="sheetTitle">Subway</h2>
         </div>
-        <button type="button" class="icon-btn" data-close>Close</button>
       </div>
-      <p class="note">These trains use this stretch of track.</p>`);
+      <p class="note">These trains use this stretch of track.</p>
+      <button type="button" class="close-bar" data-close>Close</button>`);
   }
   function openList() {
     const rows = visiblePlaces();
@@ -979,9 +1000,9 @@ if (!window.L) {
           <h2 id="sheetTitle">${escapeHtml(heading)}</h2>
           <p class="hint">Sample spots, so the filters have something to show. Replace the PLACES list in this file with your own.</p>
         </div>
-        <button type="button" class="icon-btn" data-close>Close</button>
       </div>
-      <ul class="spot-list">${items || "<li><p class=\"hint\">Nothing in this filter.</p></li>"}</ul>`);
+      <ul class="spot-list">${items || "<li><p class=\"hint\">Nothing in this filter.</p></li>"}</ul>
+      <button type="button" class="close-bar" data-close>Close</button>`);
   }
   function toggleList() {
     if (!sheetEl.hidden && sheetEl.dataset.mode === "list") closeSheet();
