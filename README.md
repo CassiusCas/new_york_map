@@ -16,11 +16,11 @@ If the page is blank, the browser blocked the map library. Open the file again o
 
 ## Filter
 
-The chips across the top filter the pins by activity: breakfast, coffee, restaurant, outdoors, and museum. **Spots** opens the same list. **Lines** opens the subway color key. **Neighborhoods** shows or hides the Manhattan neighborhood areas. Tap the title to zoom back out to the whole city.
+The chips across the top filter the pins: restaurant, coffee, bar, outdoors, museum, books, and shows. **Spots** opens the same list. **Lines** opens the subway color key. **Neighborhoods** shows or hides the Manhattan neighborhood areas. Tap the title to zoom back out to the whole city.
 
 ## Add your own places
 
-The sample pins are there so the map is usable before you add real plans. Edit the `PLACES` list near the top of the script in `index.html`. Copy one block and change it:
+The pins are the current New York list. To add another, edit the `PLACES` list near the top of the script in `index.html`. Copy one block and change it:
 
 ```js
 {
