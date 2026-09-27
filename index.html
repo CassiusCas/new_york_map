@@ -150,7 +150,7 @@
     position: absolute;
     z-index: 500;
     right: 12px;
-    bottom: calc(16px + env(safe-area-inset-bottom));
+    top: 108px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -181,7 +181,7 @@
     z-index: 500;
     left: 12px;
     bottom: calc(16px + env(safe-area-inset-bottom));
-    width: min(260px, calc(100% - 108px));
+    width: min(280px, calc(100% - 24px));
     max-height: min(46dvh, 420px);
     overflow: auto;
     background: var(--card);
@@ -277,14 +277,16 @@
   .addr { color: var(--muted); font-size: 14px; }
   .icon-btn {
     flex: none;
-    width: 44px;
-    height: 44px;
+    min-width: 72px;
+    height: 40px;
+    padding: 0 12px;
     border: 0;
-    border-radius: 50%;
+    border-radius: 999px;
     background: var(--paper);
     color: var(--ink);
-    font-size: 20px;
+    font: 650 14px/1 "Avenir Next", "Segoe UI", system-ui, sans-serif;
     cursor: pointer;
+    touch-action: manipulation;
   }
   .spot-list { list-style: none; margin: 12px 0 0; padding: 0; }
   .spot-list button {
@@ -332,7 +334,6 @@
     line-height: 1.45;
   }
   @media (min-width: 800px) {
-    #tools { bottom: 28px; }
     #legend { bottom: 28px; }
   }
 </style>
@@ -798,7 +799,7 @@ if (!window.L) {
         lineJoin: "round"
       }).on("click", (event) => {
         L.DomEvent.stopPropagation(event);
-        swallowMapClick = true;
+        armSwallow();
         openSubway(route, color);
       }).addTo(map);
     });
@@ -810,6 +811,10 @@ if (!window.L) {
   let me = null;
   let toastTimer = 0;
   let swallowMapClick = false;
+  function armSwallow() {
+    swallowMapClick = true;
+    setTimeout(() => { swallowMapClick = false; }, 0);
+  }
 
   const hashType = decodeURIComponent(location.hash.replace(/^#/, ""));
   if (hashType && PLACES.some((place) => place.type === hashType)) active = hashType;
@@ -849,7 +854,7 @@ if (!window.L) {
       });
       marker.on("click", (event) => {
         L.DomEvent.stopPropagation(event);
-        swallowMapClick = true;
+        armSwallow();
         openPlace(id, false);
       });
       marker.addTo(pins);
@@ -913,11 +918,6 @@ if (!window.L) {
     const listMode = mode === "list";
     spotsBtn.setAttribute("aria-pressed", listMode ? "true" : "false");
     spotsBtn.setAttribute("aria-expanded", listMode ? "true" : "false");
-    const close = sheetBody.querySelector("[data-close]");
-    if (close) close.addEventListener("click", closeSheet);
-    sheetBody.querySelectorAll("[data-open]").forEach((button) => {
-      button.addEventListener("click", () => openPlace(Number(button.dataset.open), true));
-    });
   }
   function placeHtml(place) {
     const meta = metaFor(place.type);
@@ -927,7 +927,7 @@ if (!window.L) {
           <p class="eyebrow"><span class="pill" style="--c:${meta.color};--on:${meta.ink}">${escapeHtml(meta.label)}</span></p>
           <h2 id="sheetTitle">${escapeHtml(place.name)}</h2>
         </div>
-        <button type="button" class="icon-btn" data-close aria-label="Close">×</button>
+        <button type="button" class="icon-btn" data-close>Close</button>
       </div>
       <p class="area">${escapeHtml(place.area)}</p>
       <p class="note">${escapeHtml(place.note)}</p>
@@ -957,7 +957,7 @@ if (!window.L) {
           <p class="eyebrow">${pills}</p>
           <h2 id="sheetTitle">Subway</h2>
         </div>
-        <button type="button" class="icon-btn" data-close aria-label="Close">×</button>
+        <button type="button" class="icon-btn" data-close>Close</button>
       </div>
       <p class="note">These trains use this stretch of track.</p>`);
   }
@@ -979,7 +979,7 @@ if (!window.L) {
           <h2 id="sheetTitle">${escapeHtml(heading)}</h2>
           <p class="hint">Sample spots, so the filters have something to show. Replace the PLACES list in this file with your own.</p>
         </div>
-        <button type="button" class="icon-btn" data-close aria-label="Close">×</button>
+        <button type="button" class="icon-btn" data-close>Close</button>
       </div>
       <ul class="spot-list">${items || "<li><p class=\"hint\">Nothing in this filter.</p></li>"}</ul>`);
   }
@@ -1027,12 +1027,23 @@ if (!window.L) {
     showToast("This browser did not share a location. You can still pan the map.");
   });
   map.on("click", () => {
-    if (swallowMapClick) {
-      swallowMapClick = false;
+    if (swallowMapClick) return;
+    if (!sheetEl.hidden) closeSheet();
+  });
+  sheetEl.addEventListener("click", (event) => {
+    if (event.target.closest("[data-close]")) {
+      closeSheet();
       return;
     }
-    if (!sheetEl.hidden && sheetEl.dataset.mode !== "list") closeSheet();
+    const opener = event.target.closest("[data-open]");
+    if (opener) openPlace(Number(opener.dataset.open), true);
   });
+  function placeChrome() {
+    document.getElementById("tools").style.top =
+      (document.querySelector("header").offsetHeight + 10) + "px";
+  }
+  window.addEventListener("resize", placeChrome);
+  placeChrome();
   map.on("zoomend", syncNames);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
