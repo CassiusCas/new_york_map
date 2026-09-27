@@ -9,6 +9,7 @@
 <meta name="theme-color" content="#f6f3ee">
 <title>New York</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
 <style>
   :root {
     --ink: #241c16;
@@ -108,11 +109,14 @@
   }
   .chip[aria-pressed="true"] .dot { background: currentColor; }
   #map {
+    position: relative;
+    z-index: 0;
     flex: 1;
     min-height: 0;
     background: #e6e2da;
   }
   .leaflet-container { font-family: inherit; background: #e6e2da; }
+  .raster-streets .leaflet-tile-pane { filter: grayscale(0.85) brightness(1.06) contrast(0.9); }
   .leaflet-top.leaflet-right { top: 10px; }
   .leaflet-control-attribution {
     font-size: 10px;
@@ -383,6 +387,8 @@
 </section>
 <div id="toast" hidden></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+<script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js"></script>
 <script>
 /* Edit this list. A new "type" becomes its own filter chip.
    lat is north, lng is west (negative in New York). */
@@ -734,7 +740,9 @@ if (!window.L) {
 } else {
   const map = L.map("map", {
     zoomControl: true,
-    preferCanvas: true
+    preferCanvas: true,
+    center: [40.705, -73.95],
+    zoom: 10
   });
   map.createPane("boroughs");
   map.getPane("boroughs").style.zIndex = 350;
@@ -742,22 +750,46 @@ if (!window.L) {
   map.getPane("subway").style.zIndex = 400;
   map.createPane("names");
   map.getPane("names").style.zIndex = 450;
-  map.createPane("labels");
-  map.getPane("labels").style.zIndex = 460;
   map.createPane("pins");
   map.getPane("pins").style.zIndex = 470;
 
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
-    subdomains: "abcd",
-    maxZoom: 20,
-    attribution: "&copy; OpenStreetMap &copy; CARTO"
-  }).addTo(map);
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png", {
-    subdomains: "abcd",
-    maxZoom: 20,
-    pane: "labels",
-    attribution: ""
-  }).addTo(map);
+  const OSM_CREDIT = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+  function hasWebGL() {
+    try {
+      const canvas = document.createElement("canvas");
+      return !!(canvas.getContext("webgl2") || canvas.getContext("webgl"));
+    } catch (error) {
+      return false;
+    }
+  }
+  function useRasterStreets() {
+    map.getContainer().classList.add("raster-streets");
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: OSM_CREDIT
+    }).addTo(map);
+  }
+  if (window.maplibregl && L.maplibreGL && hasWebGL()) {
+    const streets = L.maplibreGL({
+      style: "https://tiles.openfreemap.org/styles/positron",
+      attribution: '<a href="https://openfreemap.org">OpenFreeMap</a> ' + OSM_CREDIT
+    }).addTo(map);
+    const gl = streets.getMaplibreMap();
+    let styleReady = false;
+    gl.on("load", () => {
+      styleReady = true;
+      gl.getStyle().layers
+        .filter((layer) => layer.id.startsWith("railway"))
+        .forEach((layer) => gl.setLayoutProperty(layer.id, "visibility", "none"));
+    });
+    gl.on("error", () => {
+      if (styleReady || map.getContainer().classList.contains("raster-streets")) return;
+      map.removeLayer(streets);
+      useRasterStreets();
+    });
+  } else {
+    useRasterStreets();
+  }
 
   const boroughLayer = L.geoJSON(BOROUGHS, {
     pane: "boroughs",
@@ -1064,6 +1096,8 @@ if (!window.L) {
       (document.querySelector("header").offsetHeight + 10) + "px";
   }
   window.addEventListener("resize", placeChrome);
+  window.addEventListener("load", placeChrome);
+  if (window.ResizeObserver) new ResizeObserver(placeChrome).observe(document.querySelector("header"));
   placeChrome();
   map.on("zoomend", syncNames);
   document.addEventListener("keydown", (event) => {
