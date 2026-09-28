@@ -482,11 +482,53 @@ const PLACES = [
   {
     name: "The Elevated Acre",
     type: "outdoors",
+    types: ["outdoors", "gardens"],
     area: "Financial District, Manhattan",
     address: "55 Water St",
-    note: "Free lawn raised above the street, with East River and bridge views. Take the escalator between the buildings. Open daily, 7am to 10pm from May through September, and 8am to 8pm the rest of the year. Events can change the hours.",
+    note: "Free lawn, gardens, and amphitheater on top of a parking garage, with East River and bridge views. A required public space. Take the escalator between the buildings. Open daily, 7am to 10pm from May through September, and 8am to 8pm the rest of the year.",
+    maps: "https://www.google.com/maps/search/?api=1&query=The%20Elevated%20Acre%2C%2055%20Water%20St%2C%20New%20York%2C%20NY",
     lat: 40.703207,
     lng: -74.008644
+  },
+  {
+    name: "Pier 57 Rooftop Park",
+    type: "gardens",
+    area: "Hudson River Park, Manhattan",
+    address: "25 11th Ave",
+    note: "Free public rooftop park on Pier 57, with lawns, benches, and Hudson River overlooks. Open daily, about 6am to 1am.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pier%2057%20Rooftop%20Park%2C%2025%2011th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.74355,
+    lng: -74.01081
+  },
+  {
+    name: "SNFL rooftop terrace",
+    type: "gardens",
+    area: "Midtown, Manhattan",
+    address: "455 5th Ave",
+    note: "Free landscaped terrace on the 7th floor of the Stavros Niarchos Foundation Library. Walk into the library and go upstairs.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Stavros%20Niarchos%20Foundation%20Library%20rooftop%20terrace%2C%20455%205th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.75170,
+    lng: -73.98153
+  },
+  {
+    name: "Liberty Park",
+    type: "gardens",
+    area: "Financial District, Manhattan",
+    address: "155 Cedar St",
+    note: "Free green roof over the World Trade Center Vehicle Security Center, with paths, a living wall, and views of the memorial. Open daily, about 6am to 11pm.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Liberty%20Park%2C%20155%20Cedar%20St%2C%20New%20York%2C%20NY",
+    lat: 40.71023,
+    lng: -74.01358
+  },
+  {
+    name: "Grand Central Plaza terrace",
+    type: "gardens",
+    area: "Murray Hill, Manhattan",
+    address: "622 3rd Ave",
+    note: "Landscaped public terrace on the roof of the lower extension, with trees and tables. The way in is easy to miss, and the hours change by season.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Grand%20Central%20Plaza%20terrace%2C%20622%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.750135,
+    lng: -73.975959
   },
   {
     name: "Greenacre Park",
@@ -1925,6 +1967,7 @@ const TYPE_META = {
   michelin: { label: "Michelin", color: "#BE1E2D", ink: "#fff" },
   bar: { label: "Bar", color: "#6E3A6B", ink: "#fff" },
   outdoors: { label: "Outdoors", color: "#2E6B4F", ink: "#fff" },
+  gardens: { label: "Gardens", color: "#3E8C4A", ink: "#fff" },
   museum: { label: "Museum", color: "#314E8E", ink: "#fff" },
   books: { label: "Books", color: "#1F6F8B", ink: "#fff" },
   show: { label: "Shows", color: "#C45C26", ink: "#fff" }
@@ -1963,6 +2006,7 @@ const ICONS = {
   restaurant: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 4v7M6 4v4a2 2 0 0 0 4 0V4M8 11v9M16 4c1.5 2 2 4 2 6s-.8 3-2 3v7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   michelin: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 15c1.5 3 4 4.5 7 4.5S17.5 18 19 15M4 13h16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   outdoors: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20v-6M8 20h8M12 14l-5-6h10l-5 6zM12 8l-3.2-4h6.4L12 8z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
+  gardens: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20V12M8 20h8M12 13c-2.8-.4-5-2.4-5-5 2.4.2 4 1.6 5 3.2C13 9.6 14.6 8.2 17 8c0 2.6-2.2 4.6-5 5z" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   museum: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 10h16M6 10v7M10 10v7M14 10v7M18 10v7M5 17h14M12 4l8 4H4l8-4z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
   bar: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 4h8l-1.2 6.2A2.8 2.8 0 0 1 12 13a2.8 2.8 0 0 1-2.8-2.8L8 4zM12 13v5M9 20h6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   books: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 4.5h11.5V19H8A2 2 0 0 0 6 21V4.5zM6 19h11.5" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
@@ -2183,7 +2227,7 @@ if (!window.L) {
   if (hashType && PLACES.some((place) => placeTypes(place).includes(hashType))) active = hashType;
 
   function typesInUse() {
-    const preferred = ["breakfast", "coffee", "restaurant", "michelin", "bar", "outdoors", "museum", "books", "show"];
+    const preferred = ["breakfast", "coffee", "restaurant", "michelin", "bar", "outdoors", "gardens", "museum", "books", "show"];
     const present = [...new Set(PLACES.flatMap(placeTypes))];
     return preferred.filter((type) => present.includes(type))
       .concat(present.filter((type) => !preferred.includes(type)).sort());
