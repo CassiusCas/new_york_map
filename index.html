@@ -446,9 +446,11 @@ const PLACES = [
   {
     name: "Little Island",
     type: "outdoors",
+    types: ["outdoors", "gardens", "parks"],
     area: "Hudson River Park, Manhattan",
     address: "Pier 55",
     note: "Free. A park on stilts in the Hudson, with flower beds and shows at a waterside amphitheater.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Little%20Island%2C%20Pier%2055%2C%20Hudson%20River%20Park%2C%20Manhattan%2C%20NY",
     lat: 40.742004,
     lng: -74.010611
   },
@@ -482,7 +484,7 @@ const PLACES = [
   {
     name: "The Elevated Acre",
     type: "outdoors",
-    types: ["outdoors", "gardens"],
+    types: ["outdoors", "rooftop-garden", "parks"],
     area: "Financial District, Manhattan",
     address: "55 Water St",
     note: "Free lawn, gardens, and amphitheater on top of a parking garage, with East River and bridge views. A required public space. Take the escalator between the buildings. Open daily, 7am to 10pm from May through September, and 8am to 8pm the rest of the year.",
@@ -492,7 +494,8 @@ const PLACES = [
   },
   {
     name: "Pier 57 Rooftop Park",
-    type: "gardens",
+    type: "rooftop-garden",
+    types: ["rooftop-garden", "parks"],
     area: "Hudson River Park, Manhattan",
     address: "25 11th Ave",
     note: "Free public rooftop park on Pier 57, with lawns, benches, and Hudson River overlooks. Open daily, about 6am to 1am.",
@@ -502,7 +505,7 @@ const PLACES = [
   },
   {
     name: "SNFL rooftop terrace",
-    type: "gardens",
+    type: "rooftop-garden",
     area: "Midtown, Manhattan",
     address: "455 5th Ave",
     note: "Free landscaped terrace on the 7th floor of the Stavros Niarchos Foundation Library. Walk into the library and go upstairs.",
@@ -512,7 +515,8 @@ const PLACES = [
   },
   {
     name: "Liberty Park",
-    type: "gardens",
+    type: "rooftop-garden",
+    types: ["rooftop-garden", "parks"],
     area: "Financial District, Manhattan",
     address: "155 Cedar St",
     note: "Free green roof over the World Trade Center Vehicle Security Center, with paths, a living wall, and views of the memorial. Open daily, about 6am to 11pm.",
@@ -522,7 +526,7 @@ const PLACES = [
   },
   {
     name: "Grand Central Plaza terrace",
-    type: "gardens",
+    type: "rooftop-garden",
     area: "Murray Hill, Manhattan",
     address: "622 3rd Ave",
     note: "Landscaped public terrace on the roof of the lower extension, with trees and tables. The way in is easy to miss, and the hours change by season.",
@@ -533,9 +537,11 @@ const PLACES = [
   {
     name: "Greenacre Park",
     type: "outdoors",
+    types: ["outdoors", "parks"],
     area: "Midtown, Manhattan",
     address: "217 E 51st St",
     note: "Free pocket park with a 25-foot waterfall, designed by landscape architect Hideo Sasaki. Between Second and Third Avenues. Open daily 8am to 8pm, April through December.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Greenacre%20Park%2C%20217%20E%2051st%20St%2C%20Midtown%2C%20Manhattan%2C%20NY",
     lat: 40.756264,
     lng: -73.969285
   },
@@ -569,9 +575,11 @@ const PLACES = [
   {
     name: "Ford Foundation atrium",
     type: "outdoors",
+    types: ["outdoors", "gardens"],
     area: "Tudor City, Manhattan",
     address: "320 E 43rd St",
     note: "Free indoor garden under a 12-story glass roof, a short walk from Grand Central. Monday to Friday, 11am to 6pm, and Saturday when the gallery has a show. Register by 5pm the day before on the Ford Foundation site, and bring a photo ID.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Ford%20Foundation%20atrium%2C%20320%20E%2043rd%20St%2C%20Tudor%20City%2C%20Manhattan%2C%20NY",
     lat: 40.749879,
     lng: -73.971159
   },
@@ -1952,6 +1960,1623 @@ const PLACES = [
     lat: 40.914242,
     lng: -73.773652
   },
+  {
+    name: "103rd Street Community Garden",
+    type: "gardens",
+    area: "East Harlem, Manhattan",
+    address: "105 E 103rd St",
+    note: "Large East Harlem community garden; free during posted public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=103rd%20Street%20Community%20Garden%2C%20105%20E%20103rd%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.790200,
+    lng: -73.948800
+  },
+  {
+    name: "11 BC Serenity Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "626 E 11th St",
+    note: "East Village community garden; free during posted seasonal public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=11%20BC%20Serenity%20Garden%2C%20626%20E%2011th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.726820,
+    lng: -73.978460
+  },
+  {
+    name: "117th Street Community Garden",
+    type: "gardens",
+    area: "East Harlem, Manhattan",
+    address: "172 E 117th St",
+    note: "East Harlem community garden; free during posted public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=117th%20Street%20Community%20Garden%2C%20172%20E%20117th%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.798980,
+    lng: -73.940380
+  },
+  {
+    name: "11th Street Community Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "422 E 11th St",
+    note: "East Village land-trust community garden; visitor hours vary seasonally.",
+    maps: "https://www.google.com/maps/search/?api=1&query=11th%20Street%20Community%20Garden%2C%20422%20E%2011th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.729080,
+    lng: -73.983330
+  },
+  {
+    name: "5th Street Slope Garden Club",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "626-627 E 5th St",
+    note: "Compact East Village GreenThumb garden; free during posted public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=5th%20Street%20Slope%20Garden%20Club%2C%20626-627%20E%205th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.723430,
+    lng: -73.980570
+  },
+  {
+    name: "6BC Botanical Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "624-628 E 6th St",
+    note: "Lush East Village botanical community garden with seasonal public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=6BC%20Botanical%20Garden%2C%20624-628%20E%206th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724040,
+    lng: -73.981990
+  },
+  {
+    name: "6th Street & Avenue B Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "78-92 Avenue B",
+    note: "Large East Village community garden at Avenue B; free when open.",
+    maps: "https://www.google.com/maps/search/?api=1&query=6th%20Street%20%26%20Avenue%20B%20Garden%2C%2078-92%20Avenue%20B%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724320,
+    lng: -73.982080
+  },
+  {
+    name: "Albert's Garden",
+    type: "gardens",
+    area: "Lower East Side, Manhattan",
+    address: "16-18 E 2nd St",
+    note: "Small, densely planted East Village community garden; public hours are seasonal.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Albert%27s%20Garden%2C%2016-18%20E%202nd%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.723150,
+    lng: -73.991100
+  },
+  {
+    name: "All People's Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "293-295 E 3rd St",
+    note: "Lower East Side community garden and neighborhood gathering space.",
+    maps: "https://www.google.com/maps/search/?api=1&query=All%20People%27s%20Garden%2C%20293-295%20E%203rd%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.721950,
+    lng: -73.981800
+  },
+  {
+    name: "Brisas del Caribe",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "237 E 3rd St",
+    note: "Long-running Lower East Side community garden; free during posted hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Brisas%20del%20Caribe%2C%20237%20E%203rd%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722200,
+    lng: -73.984500
+  },
+  {
+    name: "Campos Community Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "640-644 E 12th St",
+    note: "East Village community garden near Avenue C; public hours vary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Campos%20Community%20Garden%2C%20640-644%20E%2012th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.727950,
+    lng: -73.976100
+  },
+  {
+    name: "Carmen Pabon del Amanecer Jardin",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "117 Avenue C",
+    note: "Loisaida community garden honoring poet and gardener Carmen Pabón.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Carmen%20Pabon%20del%20Amanecer%20Jardin%2C%20117%20Avenue%20C%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724650,
+    lng: -73.979050
+  },
+  {
+    name: "Children's Magical Garden",
+    type: "gardens",
+    area: "Lower East Side, Manhattan",
+    address: "131 Stanton St",
+    note: "Lower East Side community garden oriented toward children and neighborhood events.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Children%27s%20Magical%20Garden%2C%20131%20Stanton%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.721670,
+    lng: -73.986900
+  },
+  {
+    name: "Clinton Community Garden",
+    type: "gardens",
+    area: "Hell's Kitchen, Manhattan",
+    address: "436 W 48th St",
+    note: "Hell's Kitchen community garden; public viewing/open hours vary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Clinton%20Community%20Garden%2C%20436%20W%2048th%20St%2C%20Hell%27s%20Kitchen%2C%20Manhattan%2C%20NY",
+    lat: 40.763200,
+    lng: -73.992700
+  },
+  {
+    name: "Creative Little Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "530 E 6th St",
+    note: "Tiny, highly planted East Village garden; free during posted hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Creative%20Little%20Garden%2C%20530%20E%206th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724650,
+    lng: -73.982590
+  },
+  {
+    name: "De Colores Community Yard & Cultural Center",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "313 E 8th St",
+    note: "Community flower garden and cultural gathering space in the East Village.",
+    maps: "https://www.google.com/maps/search/?api=1&query=De%20Colores%20Community%20Yard%20%26%20Cultural%20Center%2C%20313%20E%208th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724900,
+    lng: -73.983900
+  },
+  {
+    name: "Dias y Flores Community Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "520-522 E 13th St",
+    note: "East Village GreenThumb garden; seasonal public access.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dias%20y%20Flores%20Community%20Garden%2C%20520-522%20E%2013th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.729650,
+    lng: -73.979550
+  },
+  {
+    name: "Dorothy K. McGowan Memorial Garden",
+    type: "gardens",
+    area: "Washington Heights, Manhattan",
+    address: "513 W 158th St",
+    note: "Washington Heights community garden managed by New York Restoration Project.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dorothy%20K.%20McGowan%20Memorial%20Garden%2C%20513%20W%20158th%20St%2C%20Washington%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.834700,
+    lng: -73.941600
+  },
+  {
+    name: "Down to Earth Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "546 E 12th St",
+    note: "East Village GreenThumb community garden, formerly Children's Garden.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Down%20to%20Earth%20Garden%2C%20546%20E%2012th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.728800,
+    lng: -73.978500
+  },
+  {
+    name: "East Side Outside Community Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "415 E 11th St",
+    note: "East Village garden associated with Open Road Park; free during posted hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=East%20Side%20Outside%20Community%20Garden%2C%20415%20E%2011th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.729100,
+    lng: -73.983650
+  },
+  {
+    name: "El Cataño Garden",
+    type: "gardens",
+    area: "East Harlem, Manhattan",
+    address: "171 E 110th St",
+    note: "East Harlem community garden; free during posted public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=El%20Cata%C3%B1o%20Garden%2C%20171%20E%20110th%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.794700,
+    lng: -73.944400
+  },
+  {
+    name: "El Jardin del Paraiso",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "710 E 5th St",
+    note: "Large Lower East Side environmental and educational community garden.",
+    maps: "https://www.google.com/maps/search/?api=1&query=El%20Jardin%20del%20Paraiso%2C%20710%20E%205th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722980,
+    lng: -73.977600
+  },
+  {
+    name: "El Sol Brillante Jr.",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "537 E 12th St",
+    note: "East Village community garden in the neighborhood garden district.",
+    maps: "https://www.google.com/maps/search/?api=1&query=El%20Sol%20Brillante%20Jr.%2C%20537%20E%2012th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.728500,
+    lng: -73.979100
+  },
+  {
+    name: "Firemen's Memorial Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "358-364 E 8th St",
+    note: "Memorial community garden in the East Village; free during posted hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Firemen%27s%20Memorial%20Garden%2C%20358-364%20E%208th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724470,
+    lng: -73.977910
+  },
+  {
+    name: "First Street Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "48 E 1st St",
+    note: "Small community garden near the Bowery; seasonal public access.",
+    maps: "https://www.google.com/maps/search/?api=1&query=First%20Street%20Garden%2C%2048%20E%201st%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.723840,
+    lng: -73.989770
+  },
+  {
+    name: "Fishbridge Park Garden",
+    type: "gardens",
+    area: "Financial District, Manhattan",
+    address: "338-340 Pearl St",
+    note: "Lower Manhattan community garden near the South Street Seaport.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Fishbridge%20Park%20Garden%2C%20338-340%20Pearl%20St%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.709260,
+    lng: -74.001980
+  },
+  {
+    name: "Francisco \"Pancho\" Ramos Community Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "703 E 9th St",
+    note: "Large East Village community garden and park with neighborhood programming.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Francisco%20%22Pancho%22%20Ramos%20Community%20Garden%2C%20703%20E%209th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.725210,
+    lng: -73.977780
+  },
+  {
+    name: "Frank White Memorial Garden",
+    type: "gardens",
+    area: "Hamilton Heights, Manhattan",
+    address: "506-508 W 143rd St",
+    note: "Hamilton Heights community garden; open to the public during posted hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Frank%20White%20Memorial%20Garden%2C%20506-508%20W%20143rd%20St%2C%20Hamilton%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.824310,
+    lng: -73.949440
+  },
+  {
+    name: "Garden of Love",
+    type: "gardens",
+    area: "Harlem, Manhattan",
+    address: "302-304 W 116th St",
+    note: "Central Harlem community garden; visitor access follows posted hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Garden%20of%20Love%2C%20302-304%20W%20116th%20St%2C%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.804550,
+    lng: -73.955650
+  },
+  {
+    name: "Green Oasis Community Garden / Gilbert's Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "372 E 8th St",
+    note: "Child-friendly East Village community garden and sculpture garden.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Green%20Oasis%20Community%20Garden%20%2F%20Gilbert%27s%20Garden%2C%20372%20E%208th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724450,
+    lng: -73.977500
+  },
+  {
+    name: "Harlem Rose Garden",
+    type: "gardens",
+    area: "East Harlem, Manhattan",
+    address: "8 E 129th St",
+    note: "Neighborhood garden in Harlem featuring ornamental plantings; hours vary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Harlem%20Rose%20Garden%2C%208%20E%20129th%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.807800,
+    lng: -73.940100
+  },
+  {
+    name: "Hope Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "193 E 2nd St",
+    note: "East Village community garden; free during posted public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hope%20Garden%2C%20193%20E%202nd%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722500,
+    lng: -73.984900
+  },
+  {
+    name: "Hope Steven Garden",
+    type: "gardens",
+    area: "Hamilton Heights, Manhattan",
+    address: "1656 Amsterdam Ave",
+    note: "Hamilton Heights community garden supported by GreenThumb.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hope%20Steven%20Garden%2C%201656%20Amsterdam%20Ave%2C%20Hamilton%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.824750,
+    lng: -73.948400
+  },
+  {
+    name: "Humacao Community Garden",
+    type: "gardens",
+    area: "East Harlem, Manhattan",
+    address: "335 E 108th St",
+    note: "East Harlem community garden; public hours vary seasonally.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Humacao%20Community%20Garden%2C%20335%20E%20108th%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.791600,
+    lng: -73.940700
+  },
+  {
+    name: "La Casita Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "339 E 8th St",
+    note: "NYRP East Village garden used for community gatherings and events.",
+    maps: "https://www.google.com/maps/search/?api=1&query=La%20Casita%20Garden%2C%20339%20E%208th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724350,
+    lng: -73.979200
+  },
+  {
+    name: "La Cuevita Community Garden",
+    type: "gardens",
+    area: "East Harlem, Manhattan",
+    address: "71 E 115th St",
+    note: "East Harlem community garden; free during posted open hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=La%20Cuevita%20Community%20Garden%2C%2071%20E%20115th%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.798600,
+    lng: -73.946700
+  },
+  {
+    name: "La Plaza Cultural de Armando Perez",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "674 E 9th St",
+    note: "East Village public green space, garden, urban farm, compost site and performance venue.",
+    maps: "https://www.google.com/maps/search/?api=1&query=La%20Plaza%20Cultural%20de%20Armando%20Perez%2C%20674%20E%209th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.725360,
+    lng: -73.978650
+  },
+  {
+    name: "Le Petit Versailles Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "247 E 2nd St",
+    note: "Small Lower East Side public community garden and arts space.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Le%20Petit%20Versailles%20Garden%2C%20247%20E%202nd%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.721750,
+    lng: -73.982450
+  },
+  {
+    name: "Liz Christy Community Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "110 E Houston St",
+    note: "Historic Bowery community garden; free during posted public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Liz%20Christy%20Community%20Garden%2C%20110%20E%20Houston%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724330,
+    lng: -73.991550
+  },
+  {
+    name: "Los Amigos Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "221 E 3rd St",
+    note: "Lower East Side GreenThumb community garden; seasonal public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Los%20Amigos%20Garden%2C%20221%20E%203rd%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722450,
+    lng: -73.985150
+  },
+  {
+    name: "Lower East Side People Care Community Garden",
+    type: "gardens",
+    area: "Lower East Side, Manhattan",
+    address: "25 Rutgers St",
+    note: "Lower East Side community garden near Henry Street; visitor hours vary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Lower%20East%20Side%20People%20Care%20Community%20Garden%2C%2025%20Rutgers%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.713950,
+    lng: -73.990000
+  },
+  {
+    name: "M'Finda Kalunga Community Garden",
+    type: "gardens",
+    area: "Lower East Side, Manhattan",
+    address: "179 Chrystie St",
+    note: "Large garden inside Sara D. Roosevelt Park with deep neighborhood history.",
+    maps: "https://www.google.com/maps/search/?api=1&query=M%27Finda%20Kalunga%20Community%20Garden%2C%20179%20Chrystie%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.721250,
+    lng: -73.992600
+  },
+  {
+    name: "Maggie's Garden",
+    type: "gardens",
+    area: "Hamilton Heights, Manhattan",
+    address: "564 W 149th St",
+    note: "Hamilton Heights community garden managed by New York Restoration Project.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Maggie%27s%20Garden%2C%20564%20W%20149th%20St%2C%20Hamilton%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.828640,
+    lng: -73.945840
+  },
+  {
+    name: "Miracle Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "194 E 3rd St",
+    note: "Long-running East Village/Lower East Side GreenThumb garden.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Miracle%20Garden%2C%20194%20E%203rd%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722550,
+    lng: -73.986300
+  },
+  {
+    name: "Morris-Jumel Community Garden",
+    type: "gardens",
+    area: "Washington Heights, Manhattan",
+    address: "457 W 162nd St",
+    note: "Washington Heights community garden near Morris-Jumel Mansion.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Morris-Jumel%20Community%20Garden%2C%20457%20W%20162nd%20St%2C%20Washington%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.835300,
+    lng: -73.939300
+  },
+  {
+    name: "Orchard Alley",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "350 E 4th St",
+    note: "Loisaida community garden with dense plantings and neighborhood stewardship.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Orchard%20Alley%2C%20350%20E%204th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722100,
+    lng: -73.978200
+  },
+  {
+    name: "Parque de Tranquilidad",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "314-318 E 4th St",
+    note: "East Village community garden on a historic former synagogue site.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Parque%20de%20Tranquilidad%2C%20314-318%20E%204th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722200,
+    lng: -73.979600
+  },
+  {
+    name: "Peach Tree Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "236 E 2nd St",
+    note: "Small Lower East Side garden named for an early peach tree.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Peach%20Tree%20Garden%2C%20236%20E%202nd%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.721700,
+    lng: -73.983100
+  },
+  {
+    name: "RING - Riverside Inwood Neighborhood Garden",
+    type: "gardens",
+    area: "Inwood, Manhattan",
+    address: "236 Dyckman St",
+    note: "Inwood community garden near Dyckman Street; free during posted hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=RING%20-%20Riverside%20Inwood%20Neighborhood%20Garden%2C%20236%20Dyckman%20St%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.866600,
+    lng: -73.926700
+  },
+  {
+    name: "Sam & Sadie Koenig Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "237 E 7th St",
+    note: "East Village community garden; seasonal public access.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sam%20%26%20Sadie%20Koenig%20Garden%2C%20237%20E%207th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.724100,
+    lng: -73.981700
+  },
+  {
+    name: "Secret Garden",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "293 E 4th St",
+    note: "Small East Village community garden in the Loisaida garden district.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Secret%20Garden%2C%20293%20E%204th%20St%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.722350,
+    lng: -73.980700
+  },
+  {
+    name: "Siempre Verde Garden",
+    type: "gardens",
+    area: "Lower East Side, Manhattan",
+    address: "181 Stanton St / 137 Attorney St",
+    note: "Lower East Side GreenThumb community garden with posted public hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Siempre%20Verde%20Garden%2C%20181%20Stanton%20St%20%2F%20137%20Attorney%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.719950,
+    lng: -73.984200
+  },
+  {
+    name: "Vamos A Sembrar",
+    type: "gardens",
+    area: "East Village, Manhattan",
+    address: "198 Avenue B",
+    note: "East Village GreenThumb garden near 12th Street.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Vamos%20A%20Sembrar%2C%20198%20Avenue%20B%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.728400,
+    lng: -73.978900
+  },
+  {
+    name: "West Side Community Garden",
+    type: "gardens",
+    area: "Upper West Side, Manhattan",
+    address: "Columbus Ave between W 89th & W 90th St",
+    note: "Privately operated nonprofit garden with free seasonal public access.",
+    maps: "https://www.google.com/maps/search/?api=1&query=West%20Side%20Community%20Garden%2C%20Columbus%20Ave%20between%20W%2089th%20%26%20W%2090th%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.789850,
+    lng: -73.970450
+  },
+  {
+    name: "William A. Harris Garden",
+    type: "gardens",
+    area: "Hamilton Heights, Manhattan",
+    address: "869 St Nicholas Ave",
+    note: "Hamilton Heights community garden; open during posted seasonal hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=William%20A.%20Harris%20Garden%2C%20869%20St%20Nicholas%20Ave%2C%20Hamilton%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.829900,
+    lng: -73.941800
+  },
+  {
+    name: "Central Park Conservatory Garden",
+    type: "gardens",
+    area: "Central Park, Manhattan",
+    address: "5th Ave & E 105th St",
+    note: "Six-acre formal garden in Central Park with Italian, French and English sections.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Central%20Park%20Conservatory%20Garden%2C%205th%20Ave%20%26%20E%20105th%20St%2C%20Central%20Park%2C%20Manhattan%2C%20NY",
+    lat: 40.793800,
+    lng: -73.952500
+  },
+  {
+    name: "Shakespeare Garden",
+    type: "gardens",
+    area: "Central Park, Manhattan",
+    address: "Central Park, W 79th St",
+    note: "Four-acre hillside garden featuring plants referenced in Shakespeare's works.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Shakespeare%20Garden%2C%20Central%20Park%2C%20W%2079th%20St%2C%20Central%20Park%2C%20Manhattan%2C%20NY",
+    lat: 40.779750,
+    lng: -73.969550
+  },
+  {
+    name: "Alpine Garden at Fort Tryon Park",
+    type: "gardens",
+    area: "Inwood, Manhattan",
+    address: "Fort Tryon Park",
+    note: "Rocky alpine-style planting area within Fort Tryon Park; free park access.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Alpine%20Garden%20at%20Fort%20Tryon%20Park%2C%20Fort%20Tryon%20Park%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.863550,
+    lng: -73.932500
+  },
+  {
+    name: "Queen Elizabeth II September 11th Garden",
+    type: "gardens",
+    area: "Financial District, Manhattan",
+    address: "11 Hanover Square",
+    note: "Quiet British-themed memorial garden in Lower Manhattan.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Queen%20Elizabeth%20II%20September%2011th%20Garden%2C%2011%20Hanover%20Square%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.704450,
+    lng: -74.009850
+  },
+  {
+    name: "Jefferson Market Garden",
+    type: "gardens",
+    area: "West Village, Manhattan",
+    address: "10 Greenwich Ave",
+    note: "Volunteer-run public garden next to Jefferson Market Library; seasonal hours.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Jefferson%20Market%20Garden%2C%2010%20Greenwich%20Ave%2C%20West%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.734000,
+    lng: -74.001600
+  },
+  {
+    name: "Lotus Garden",
+    type: "gardens",
+    area: "Upper West Side, Manhattan",
+    address: "487 W 97th St",
+    note: "Community garden on top of a parking garage; limited public hours seasonally.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Lotus%20Garden%2C%20487%20W%2097th%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.795050,
+    lng: -73.972800
+  },
+  {
+    name: "550 Madison Public Garden",
+    type: "gardens",
+    area: "Midtown, Manhattan",
+    address: "550 Madison Ave",
+    note: "Free covered public garden with seating and lush planting behind 550 Madison.",
+    maps: "https://www.google.com/maps/search/?api=1&query=550%20Madison%20Public%20Garden%2C%20550%20Madison%20Ave%2C%20Midtown%2C%20Manhattan%2C%20NY",
+    lat: 40.761400,
+    lng: -73.973200
+  },
+  {
+    name: "The Battery",
+    type: "parks",
+    types: ["parks", "gardens"],
+    area: "Battery Park City, Manhattan",
+    address: "State St & Battery Pl",
+    note: "Historic waterfront park at Manhattan's southern tip, with the Battery Bosque, perennial gardens, and harbor views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=The%20Battery%2C%20State%20St%20%26%20Battery%20Pl%2C%20Battery%20Park%20City%2C%20Manhattan%2C%20NY",
+    lat: 40.703300,
+    lng: -74.017000
+  },
+  {
+    name: "Bowling Green",
+    type: "parks",
+    area: "Financial District, Manhattan",
+    address: "Broadway & Whitehall St",
+    note: "Small historic oval park at the foot of Broadway.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Bowling%20Green%2C%20Broadway%20%26%20Whitehall%20St%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.704500,
+    lng: -74.013700
+  },
+  {
+    name: "British Garden at Hanover Square",
+    type: "gardens",
+    types: ["gardens", "parks"],
+    area: "Financial District, Manhattan",
+    address: "Hanover Square",
+    note: "Small landscaped memorial garden in the Financial District.",
+    maps: "https://www.google.com/maps/search/?api=1&query=British%20Garden%20at%20Hanover%20Square%2C%20Hanover%20Square%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.704700,
+    lng: -74.009600
+  },
+  {
+    name: "Vietnam Veterans Plaza",
+    type: "parks",
+    area: "Financial District, Manhattan",
+    address: "55 Water St",
+    note: "Waterfront memorial plaza adjoining the Elevated Acre.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Vietnam%20Veterans%20Plaza%2C%2055%20Water%20St%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.703750,
+    lng: -74.009000
+  },
+  {
+    name: "Old Slip Park",
+    type: "parks",
+    area: "Financial District, Manhattan",
+    address: "Old Slip & South St",
+    note: "Small public waterfront space in the Financial District.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Old%20Slip%20Park%2C%20Old%20Slip%20%26%20South%20St%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.703000,
+    lng: -74.007100
+  },
+  {
+    name: "Wall Street Park",
+    type: "parks",
+    area: "Financial District, Manhattan",
+    address: "Wall St & South St",
+    note: "East River waterfront open space near Wall Street.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Wall%20Street%20Park%2C%20Wall%20St%20%26%20South%20St%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.704900,
+    lng: -74.006500
+  },
+  {
+    name: "Zuccotti Park",
+    type: "parks",
+    area: "Financial District, Manhattan",
+    address: "Broadway & Liberty St",
+    note: "Privately owned public plaza in the Financial District.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Zuccotti%20Park%2C%20Broadway%20%26%20Liberty%20St%2C%20Financial%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.709650,
+    lng: -74.011850
+  },
+  {
+    name: "City Hall Park",
+    type: "parks",
+    area: "Civic Center, Manhattan",
+    address: "Broadway & Chambers St",
+    note: "Historic civic park surrounding New York City Hall.",
+    maps: "https://www.google.com/maps/search/?api=1&query=City%20Hall%20Park%2C%20Broadway%20%26%20Chambers%20St%2C%20Civic%20Center%2C%20Manhattan%2C%20NY",
+    lat: 40.712700,
+    lng: -74.006000
+  },
+  {
+    name: "Thomas Paine Park / Foley Square",
+    type: "parks",
+    area: "Civic Center, Manhattan",
+    address: "Lafayette St & Centre St",
+    note: "Civic open space surrounded by courthouses and government buildings.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Thomas%20Paine%20Park%20%2F%20Foley%20Square%2C%20Lafayette%20St%20%26%20Centre%20St%2C%20Civic%20Center%2C%20Manhattan%2C%20NY",
+    lat: 40.714350,
+    lng: -74.002800
+  },
+  {
+    name: "Collect Pond Park",
+    type: "parks",
+    area: "Civic Center, Manhattan",
+    address: "Leonard St & Centre St",
+    note: "Small landscaped park recalling Lower Manhattan's historic Collect Pond.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Collect%20Pond%20Park%2C%20Leonard%20St%20%26%20Centre%20St%2C%20Civic%20Center%2C%20Manhattan%2C%20NY",
+    lat: 40.716050,
+    lng: -74.000650
+  },
+  {
+    name: "Columbus Park",
+    type: "parks",
+    area: "Chinatown, Manhattan",
+    address: "67 Mulberry St",
+    note: "Active Chinatown neighborhood park with seating, sports and gathering areas.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Columbus%20Park%2C%2067%20Mulberry%20St%2C%20Chinatown%2C%20Manhattan%2C%20NY",
+    lat: 40.715700,
+    lng: -73.999100
+  },
+  {
+    name: "Sara D. Roosevelt Park",
+    type: "parks",
+    area: "Lower East Side, Manhattan",
+    address: "Chrystie St, Houston St to Canal St",
+    note: "Long Lower East Side park with playgrounds, courts and community gardens.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sara%20D.%20Roosevelt%20Park%2C%20Chrystie%20St%2C%20Houston%20St%20to%20Canal%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.719600,
+    lng: -73.991800
+  },
+  {
+    name: "Seward Park",
+    type: "parks",
+    area: "Lower East Side, Manhattan",
+    address: "Essex St & Canal St",
+    note: "Historic Lower East Side neighborhood park and recreation area.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Seward%20Park%2C%20Essex%20St%20%26%20Canal%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.714850,
+    lng: -73.989700
+  },
+  {
+    name: "Corlears Hook Park",
+    type: "parks",
+    area: "Lower East Side, Manhattan",
+    address: "Jackson St & Cherry St",
+    note: "Waterfront-adjacent Lower East Side park at the south end of East River Park.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Corlears%20Hook%20Park%2C%20Jackson%20St%20%26%20Cherry%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.711350,
+    lng: -73.978700
+  },
+  {
+    name: "East River Park",
+    type: "parks",
+    area: "Lower East Side, Manhattan",
+    address: "FDR Dr, Montgomery St to E 12th St",
+    note: "Large East River waterfront park with recreation facilities and paths.",
+    maps: "https://www.google.com/maps/search/?api=1&query=East%20River%20Park%2C%20FDR%20Dr%2C%20Montgomery%20St%20to%20E%2012th%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.716200,
+    lng: -73.974800
+  },
+  {
+    name: "Hamilton Fish Park",
+    type: "parks",
+    area: "Lower East Side, Manhattan",
+    address: "128 Pitt St",
+    note: "Lower East Side park with pool, recreation center and open space.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hamilton%20Fish%20Park%2C%20128%20Pitt%20St%2C%20Lower%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.719350,
+    lng: -73.980350
+  },
+  {
+    name: "Tompkins Square Park",
+    type: "parks",
+    area: "East Village, Manhattan",
+    address: "E 7th St to E 10th St, Avenues A to B",
+    note: "10.5-acre East Village neighborhood park with lawns, dog run and playgrounds.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tompkins%20Square%20Park%2C%20E%207th%20St%20to%20E%2010th%20St%2C%20Avenues%20A%20to%20B%2C%20East%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.726500,
+    lng: -73.981500
+  },
+  {
+    name: "Washington Square Park",
+    type: "parks",
+    area: "Greenwich Village, Manhattan",
+    address: "Washington Square",
+    note: "Iconic Greenwich Village park centered on the Washington Square Arch and fountain.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Washington%20Square%20Park%2C%20Washington%20Square%2C%20Greenwich%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.730800,
+    lng: -73.997300
+  },
+  {
+    name: "Father Demo Square",
+    type: "parks",
+    area: "Greenwich Village, Manhattan",
+    address: "Bleecker St & 6th Ave",
+    note: "Small Greenwich Village plaza with seating and a fountain.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Father%20Demo%20Square%2C%20Bleecker%20St%20%26%206th%20Ave%2C%20Greenwich%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.728650,
+    lng: -74.002100
+  },
+  {
+    name: "Christopher Park",
+    type: "parks",
+    area: "West Village, Manhattan",
+    address: "Christopher St & Grove St",
+    note: "Small historic park opposite the Stonewall Inn.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Christopher%20Park%2C%20Christopher%20St%20%26%20Grove%20St%2C%20West%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.733600,
+    lng: -74.002750
+  },
+  {
+    name: "James J. Walker Park",
+    type: "parks",
+    area: "West Village, Manhattan",
+    address: "Hudson St & Clarkson St",
+    note: "West Village recreation park with ballfields and playground space.",
+    maps: "https://www.google.com/maps/search/?api=1&query=James%20J.%20Walker%20Park%2C%20Hudson%20St%20%26%20Clarkson%20St%2C%20West%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.729550,
+    lng: -74.006100
+  },
+  {
+    name: "Hudson River Park",
+    type: "parks",
+    area: "Hudson River Park, Manhattan",
+    address: "Hudson River waterfront, Battery Pl to W 59th St",
+    note: "Major linear waterfront park of piers, paths, lawns and recreation spaces.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hudson%20River%20Park%2C%20Hudson%20River%20waterfront%2C%20Battery%20Pl%20to%20W%2059th%20St%2C%20Hudson%20River%20Park%2C%20Manhattan%2C%20NY",
+    lat: 40.741000,
+    lng: -74.010500
+  },
+  {
+    name: "Pier 26 at Hudson River Park",
+    type: "parks",
+    area: "Tribeca, Manhattan",
+    address: "Hudson River Park at N Moore St",
+    note: "Waterfront pier park with ecological features, lawn and river views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pier%2026%20at%20Hudson%20River%20Park%2C%20Hudson%20River%20Park%20at%20N%20Moore%20St%2C%20Tribeca%2C%20Manhattan%2C%20NY",
+    lat: 40.720150,
+    lng: -74.013200
+  },
+  {
+    name: "Pier 25 at Hudson River Park",
+    type: "parks",
+    area: "Tribeca, Manhattan",
+    address: "Hudson River Park at N Moore St",
+    note: "Recreation pier with playground, sports, mini-golf and river views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pier%2025%20at%20Hudson%20River%20Park%2C%20Hudson%20River%20Park%20at%20N%20Moore%20St%2C%20Tribeca%2C%20Manhattan%2C%20NY",
+    lat: 40.720850,
+    lng: -74.012800
+  },
+  {
+    name: "Washington Market Park",
+    type: "parks",
+    area: "Tribeca, Manhattan",
+    address: "Greenwich St & Duane St",
+    note: "Tribeca neighborhood park with lawn, playgrounds and gardens.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Washington%20Market%20Park%2C%20Greenwich%20St%20%26%20Duane%20St%2C%20Tribeca%2C%20Manhattan%2C%20NY",
+    lat: 40.717200,
+    lng: -74.011800
+  },
+  {
+    name: "Duane Park",
+    type: "parks",
+    area: "Tribeca, Manhattan",
+    address: "Duane St & Hudson St",
+    note: "Tiny triangular historic park in Tribeca.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Duane%20Park%2C%20Duane%20St%20%26%20Hudson%20St%2C%20Tribeca%2C%20Manhattan%2C%20NY",
+    lat: 40.717450,
+    lng: -74.009400
+  },
+  {
+    name: "Tribeca Park",
+    type: "parks",
+    area: "Tribeca, Manhattan",
+    address: "Beach St & W Broadway",
+    note: "Small triangular landscaped park in Tribeca.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tribeca%20Park%2C%20Beach%20St%20%26%20W%20Broadway%2C%20Tribeca%2C%20Manhattan%2C%20NY",
+    lat: 40.720550,
+    lng: -74.010550
+  },
+  {
+    name: "Albert Capsouto Park",
+    type: "parks",
+    area: "SoHo, Manhattan",
+    address: "Canal St & Varick St",
+    note: "Landscaped triangular park with seating and a fountain.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Albert%20Capsouto%20Park%2C%20Canal%20St%20%26%20Varick%20St%2C%20SoHo%2C%20Manhattan%2C%20NY",
+    lat: 40.726850,
+    lng: -74.006700
+  },
+  {
+    name: "High Line",
+    type: "parks",
+    types: ["parks", "gardens"],
+    area: "Chelsea, Manhattan",
+    address: "Gansevoort St to W 34th St",
+    note: "Free elevated linear park on a former freight line, with naturalistic gardens.",
+    maps: "https://www.google.com/maps/search/?api=1&query=High%20Line%2C%20Gansevoort%20St%20to%20W%2034th%20St%2C%20Chelsea%2C%20Manhattan%2C%20NY",
+    lat: 40.747990,
+    lng: -74.004760
+  },
+  {
+    name: "Abingdon Square Park",
+    type: "parks",
+    area: "West Village, Manhattan",
+    address: "Hudson St & W 12th St",
+    note: "Small historic West Village park with mature trees and seating.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Abingdon%20Square%20Park%2C%20Hudson%20St%20%26%20W%2012th%20St%2C%20West%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.737600,
+    lng: -74.005500
+  },
+  {
+    name: "Jackson Square Park",
+    type: "parks",
+    area: "West Village, Manhattan",
+    address: "8th Ave & W 13th St",
+    note: "Triangular Greenwich Village park with ornamental plantings.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Jackson%20Square%20Park%2C%208th%20Ave%20%26%20W%2013th%20St%2C%20West%20Village%2C%20Manhattan%2C%20NY",
+    lat: 40.737350,
+    lng: -74.002850
+  },
+  {
+    name: "Chelsea Park",
+    type: "parks",
+    area: "Chelsea, Manhattan",
+    address: "W 27th St & 9th Ave",
+    note: "Neighborhood park with playgrounds, courts and athletic space.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Chelsea%20Park%2C%20W%2027th%20St%20%26%209th%20Ave%2C%20Chelsea%2C%20Manhattan%2C%20NY",
+    lat: 40.749500,
+    lng: -74.000000
+  },
+  {
+    name: "Clement Clarke Moore Park",
+    type: "parks",
+    area: "Chelsea, Manhattan",
+    address: "W 22nd St & 10th Ave",
+    note: "Small Chelsea park with playground and shaded seating.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Clement%20Clarke%20Moore%20Park%2C%20W%2022nd%20St%20%26%2010th%20Ave%2C%20Chelsea%2C%20Manhattan%2C%20NY",
+    lat: 40.746450,
+    lng: -74.003400
+  },
+  {
+    name: "Madison Square Park",
+    type: "parks",
+    area: "Flatiron District, Manhattan",
+    address: "Madison Ave & E 23rd St",
+    note: "Landscaped Flatiron park with lawns, public art and mature trees.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Madison%20Square%20Park%2C%20Madison%20Ave%20%26%20E%2023rd%20St%2C%20Flatiron%20District%2C%20Manhattan%2C%20NY",
+    lat: 40.742000,
+    lng: -73.987900
+  },
+  {
+    name: "Union Square Park",
+    type: "parks",
+    area: "Gramercy, Manhattan",
+    address: "14th St & Broadway",
+    note: "Central Manhattan gathering space known for its Greenmarket and public events.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Union%20Square%20Park%2C%2014th%20St%20%26%20Broadway%2C%20Gramercy%2C%20Manhattan%2C%20NY",
+    lat: 40.735900,
+    lng: -73.990600
+  },
+  {
+    name: "Stuyvesant Square",
+    type: "parks",
+    area: "Gramercy, Manhattan",
+    address: "E 15th to E 17th St, Rutherford Pl to Nathan D. Perlman Pl",
+    note: "Two-section historic park with lawns, paths and mature trees.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Stuyvesant%20Square%2C%20E%2015th%20to%20E%2017th%20St%2C%20Rutherford%20Pl%20to%20Nathan%20D.%20Perlman%20Pl%2C%20Gramercy%2C%20Manhattan%2C%20NY",
+    lat: 40.733900,
+    lng: -73.984700
+  },
+  {
+    name: "Bellevue South Park",
+    type: "parks",
+    area: "Kips Bay, Manhattan",
+    address: "E 26th St & 2nd Ave",
+    note: "Neighborhood park in Kips Bay with seating and recreation areas.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Bellevue%20South%20Park%2C%20E%2026th%20St%20%26%202nd%20Ave%2C%20Kips%20Bay%2C%20Manhattan%2C%20NY",
+    lat: 40.739500,
+    lng: -73.979600
+  },
+  {
+    name: "Asser Levy Park",
+    type: "parks",
+    area: "Kips Bay, Manhattan",
+    address: "E 23rd St & FDR Dr",
+    note: "East Side park near the Asser Levy Recreation Center.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Asser%20Levy%20Park%2C%20E%2023rd%20St%20%26%20FDR%20Dr%2C%20Kips%20Bay%2C%20Manhattan%2C%20NY",
+    lat: 40.736300,
+    lng: -73.975200
+  },
+  {
+    name: "Peter's Field",
+    type: "parks",
+    area: "Gramercy, Manhattan",
+    address: "2nd Ave & E 20th St",
+    note: "Gramercy-area neighborhood park with sports and playground space.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Peter%27s%20Field%2C%202nd%20Ave%20%26%20E%2020th%20St%2C%20Gramercy%2C%20Manhattan%2C%20NY",
+    lat: 40.735550,
+    lng: -73.982300
+  },
+  {
+    name: "Bryant Park",
+    type: "parks",
+    area: "Midtown, Manhattan",
+    address: "6th Ave & W 42nd St",
+    note: "Midtown lawn and public plaza behind the New York Public Library.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Bryant%20Park%2C%206th%20Ave%20%26%20W%2042nd%20St%2C%20Midtown%2C%20Manhattan%2C%20NY",
+    lat: 40.753600,
+    lng: -73.983200
+  },
+  {
+    name: "Herald Square",
+    type: "parks",
+    area: "Midtown, Manhattan",
+    address: "Broadway & W 34th St",
+    note: "Busy Midtown pedestrian plaza with seating and landscaping.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Herald%20Square%2C%20Broadway%20%26%20W%2034th%20St%2C%20Midtown%2C%20Manhattan%2C%20NY",
+    lat: 40.750550,
+    lng: -73.988850
+  },
+  {
+    name: "Greeley Square",
+    type: "parks",
+    area: "Chelsea, Manhattan",
+    address: "Broadway & W 32nd St",
+    note: "Small landscaped plaza opposite Herald Square.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Greeley%20Square%2C%20Broadway%20%26%20W%2032nd%20St%2C%20Chelsea%2C%20Manhattan%2C%20NY",
+    lat: 40.748950,
+    lng: -73.988450
+  },
+  {
+    name: "Pershing Square",
+    type: "parks",
+    area: "Murray Hill, Manhattan",
+    address: "Park Ave & E 42nd St",
+    note: "Public plaza next to Grand Central Terminal.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pershing%20Square%2C%20Park%20Ave%20%26%20E%2042nd%20St%2C%20Murray%20Hill%2C%20Manhattan%2C%20NY",
+    lat: 40.751750,
+    lng: -73.977700
+  },
+  {
+    name: "Dag Hammarskjöld Plaza",
+    type: "parks",
+    area: "Midtown, Manhattan",
+    address: "E 47th St & 2nd Ave",
+    note: "Landscaped plaza and gathering space near the United Nations.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dag%20Hammarskj%C3%B6ld%20Plaza%2C%20E%2047th%20St%20%26%202nd%20Ave%2C%20Midtown%2C%20Manhattan%2C%20NY",
+    lat: 40.752650,
+    lng: -73.969100
+  },
+  {
+    name: "Ralph Bunche Park",
+    type: "parks",
+    area: "Midtown, Manhattan",
+    address: "1st Ave & E 42nd St",
+    note: "Small park and peace-oriented civic space opposite the United Nations.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Ralph%20Bunche%20Park%2C%201st%20Ave%20%26%20E%2042nd%20St%2C%20Midtown%2C%20Manhattan%2C%20NY",
+    lat: 40.750500,
+    lng: -73.969100
+  },
+  {
+    name: "Tudor City Greens - North Park",
+    type: "parks",
+    types: ["parks", "gardens"],
+    area: "Murray Hill, Manhattan",
+    address: "Tudor City Pl & E 43rd St",
+    note: "Small landscaped public-access park in Tudor City.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tudor%20City%20Greens%20-%20North%20Park%2C%20Tudor%20City%20Pl%20%26%20E%2043rd%20St%2C%20Murray%20Hill%2C%20Manhattan%2C%20NY",
+    lat: 40.749200,
+    lng: -73.970900
+  },
+  {
+    name: "Tudor City Greens - South Park",
+    type: "parks",
+    types: ["parks", "gardens"],
+    area: "Murray Hill, Manhattan",
+    address: "Tudor City Pl & E 41st St",
+    note: "Small landscaped public-access park in Tudor City.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tudor%20City%20Greens%20-%20South%20Park%2C%20Tudor%20City%20Pl%20%26%20E%2041st%20St%2C%20Murray%20Hill%2C%20Manhattan%2C%20NY",
+    lat: 40.748000,
+    lng: -73.971000
+  },
+  {
+    name: "Paley Park",
+    type: "parks",
+    area: "Midtown, Manhattan",
+    address: "3 E 53rd St",
+    note: "Small privately owned public pocket park with a waterfall wall.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Paley%20Park%2C%203%20E%2053rd%20St%2C%20Midtown%2C%20Manhattan%2C%20NY",
+    lat: 40.760750,
+    lng: -73.975900
+  },
+  {
+    name: "Central Park",
+    type: "parks",
+    area: "Central Park, Manhattan",
+    address: "59th St to 110th St, 5th Ave to Central Park West",
+    note: "843-acre flagship Manhattan park with lakes, woods, lawns, gardens and recreation.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Central%20Park%2C%2059th%20St%20to%20110th%20St%2C%205th%20Ave%20to%20Central%20Park%20West%2C%20Central%20Park%2C%20Manhattan%2C%20NY",
+    lat: 40.782900,
+    lng: -73.965400
+  },
+  {
+    name: "Theodore Roosevelt Park",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Central Park West & W 79th St",
+    note: "Landscaped park surrounding the American Museum of Natural History.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Theodore%20Roosevelt%20Park%2C%20Central%20Park%20West%20%26%20W%2079th%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.781300,
+    lng: -73.974200
+  },
+  {
+    name: "Dante Park",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Broadway & W 63rd St",
+    note: "Tiny triangular park opposite Lincoln Center.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dante%20Park%2C%20Broadway%20%26%20W%2063rd%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.771250,
+    lng: -73.982250
+  },
+  {
+    name: "Damrosch Park",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Amsterdam Ave & W 62nd St",
+    note: "Lincoln Center outdoor performance plaza and park.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Damrosch%20Park%2C%20Amsterdam%20Ave%20%26%20W%2062nd%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.772200,
+    lng: -73.985400
+  },
+  {
+    name: "Richard Tucker Park",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Broadway & W 66th St",
+    note: "Small pedestrian plaza near Lincoln Center.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Richard%20Tucker%20Park%2C%20Broadway%20%26%20W%2066th%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.773500,
+    lng: -73.981550
+  },
+  {
+    name: "DeWitt Clinton Park",
+    type: "parks",
+    area: "Hell's Kitchen, Manhattan",
+    address: "11th Ave & W 52nd St",
+    note: "Hell's Kitchen park with lawns, sports fields and playgrounds.",
+    maps: "https://www.google.com/maps/search/?api=1&query=DeWitt%20Clinton%20Park%2C%2011th%20Ave%20%26%20W%2052nd%20St%2C%20Hell%27s%20Kitchen%2C%20Manhattan%2C%20NY",
+    lat: 40.768100,
+    lng: -73.994400
+  },
+  {
+    name: "Hell's Kitchen Park",
+    type: "parks",
+    area: "Hell's Kitchen, Manhattan",
+    address: "10th Ave & W 47th St",
+    note: "Compact neighborhood park with playground and seating.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hell%27s%20Kitchen%20Park%2C%2010th%20Ave%20%26%20W%2047th%20St%2C%20Hell%27s%20Kitchen%2C%20Manhattan%2C%20NY",
+    lat: 40.763950,
+    lng: -73.993700
+  },
+  {
+    name: "Riverside Park South",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Hudson River, W 59th to W 72nd St",
+    note: "Modern waterfront extension of Riverside Park with piers, lawns and paths.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Riverside%20Park%20South%2C%20Hudson%20River%2C%20W%2059th%20to%20W%2072nd%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.778600,
+    lng: -73.990500
+  },
+  {
+    name: "Riverside Park",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Riverside Dr, W 72nd to W 158th St",
+    note: "Long Hudson-side park with paths, sports, monuments and river views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Riverside%20Park%2C%20Riverside%20Dr%2C%20W%2072nd%20to%20W%20158th%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.800700,
+    lng: -73.970300
+  },
+  {
+    name: "Verdi Square",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Broadway & W 72nd St",
+    note: "Small Upper West Side park and transit plaza.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Verdi%20Square%2C%20Broadway%20%26%20W%2072nd%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.778700,
+    lng: -73.982500
+  },
+  {
+    name: "Septuagesimo Uno",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "W 71st St between West End Ave & Amsterdam Ave",
+    note: "One of NYC's smallest named parks, tucked into the Upper West Side.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Septuagesimo%20Uno%2C%20W%2071st%20St%20between%20West%20End%20Ave%20%26%20Amsterdam%20Ave%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.777300,
+    lng: -73.980850
+  },
+  {
+    name: "Straus Park",
+    type: "parks",
+    area: "Upper West Side, Manhattan",
+    address: "Broadway & W 106th St",
+    note: "Small landscaped memorial park at Broadway and West End Avenue.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Straus%20Park%2C%20Broadway%20%26%20W%20106th%20St%2C%20Upper%20West%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.801000,
+    lng: -73.968000
+  },
+  {
+    name: "Sakura Park",
+    type: "parks",
+    types: ["parks", "gardens"],
+    area: "Morningside Heights, Manhattan",
+    address: "500 Riverside Dr",
+    note: "Cherry-tree park beside Riverside Church and Grant's Tomb.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sakura%20Park%2C%20500%20Riverside%20Dr%2C%20Morningside%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.812300,
+    lng: -73.962400
+  },
+  {
+    name: "Morningside Park",
+    type: "parks",
+    area: "Morningside Heights, Manhattan",
+    address: "Morningside Ave, W 110th to W 123rd St",
+    note: "Linear hillside park separating Morningside Heights and Harlem.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Morningside%20Park%2C%20Morningside%20Ave%2C%20W%20110th%20to%20W%20123rd%20St%2C%20Morningside%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.805600,
+    lng: -73.959800
+  },
+  {
+    name: "Marcus Garvey Park",
+    type: "parks",
+    area: "Harlem, Manhattan",
+    address: "Madison Ave, E 120th to E 124th St",
+    note: "Harlem park with Mount Morris hill, recreation center and performance areas.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Marcus%20Garvey%20Park%2C%20Madison%20Ave%2C%20E%20120th%20to%20E%20124th%20St%2C%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.805300,
+    lng: -73.943300
+  },
+  {
+    name: "St. Nicholas Park",
+    type: "parks",
+    area: "Hamilton Heights, Manhattan",
+    address: "St Nicholas Ave, W 128th to W 141st St",
+    note: "Long hillside park between Harlem and Hamilton Heights.",
+    maps: "https://www.google.com/maps/search/?api=1&query=St.%20Nicholas%20Park%2C%20St%20Nicholas%20Ave%2C%20W%20128th%20to%20W%20141st%20St%2C%20Hamilton%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.817700,
+    lng: -73.948200
+  },
+  {
+    name: "Jackie Robinson Park",
+    type: "parks",
+    area: "Harlem, Manhattan",
+    address: "Bradhurst Ave, W 145th to W 155th St",
+    note: "Harlem park with recreation center, pool, bandshell and playgrounds.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Jackie%20Robinson%20Park%2C%20Bradhurst%20Ave%2C%20W%20145th%20to%20W%20155th%20St%2C%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.824600,
+    lng: -73.942400
+  },
+  {
+    name: "Montefiore Square",
+    type: "parks",
+    area: "Hamilton Heights, Manhattan",
+    address: "Broadway & W 137th St",
+    note: "Small landscaped Harlem/Hamilton Heights square.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Montefiore%20Square%2C%20Broadway%20%26%20W%20137th%20St%2C%20Hamilton%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.821800,
+    lng: -73.953600
+  },
+  {
+    name: "Riverbank State Park",
+    type: "parks",
+    area: "Hamilton Heights, Manhattan",
+    address: "679 Riverside Dr",
+    note: "28-acre state park built over a water-treatment facility, with sports and Hudson views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Riverbank%20State%20Park%2C%20679%20Riverside%20Dr%2C%20Hamilton%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.825500,
+    lng: -73.955000
+  },
+  {
+    name: "West Harlem Piers Park",
+    type: "parks",
+    area: "Harlem, Manhattan",
+    address: "125th St & Marginal St",
+    note: "Hudson River waterfront park with piers, lawns and seating.",
+    maps: "https://www.google.com/maps/search/?api=1&query=West%20Harlem%20Piers%20Park%2C%20125th%20St%20%26%20Marginal%20St%2C%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.818200,
+    lng: -73.960400
+  },
+  {
+    name: "Harlem River Park",
+    type: "parks",
+    area: "East Harlem, Manhattan",
+    address: "Harlem River waterfront, E 125th St to E 145th St",
+    note: "Linear waterfront park and greenway along the Harlem River.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Harlem%20River%20Park%2C%20Harlem%20River%20waterfront%2C%20E%20125th%20St%20to%20E%20145th%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.810000,
+    lng: -73.934800
+  },
+  {
+    name: "Thomas Jefferson Park",
+    type: "parks",
+    area: "East Harlem, Manhattan",
+    address: "1st Ave & E 112th St",
+    note: "East Harlem park with pool, recreation center and athletic facilities.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Thomas%20Jefferson%20Park%2C%201st%20Ave%20%26%20E%20112th%20St%2C%20East%20Harlem%2C%20Manhattan%2C%20NY",
+    lat: 40.793100,
+    lng: -73.936800
+  },
+  {
+    name: "Randall's Island Park",
+    type: "parks",
+    area: "Randall's Island, Manhattan",
+    address: "Randall's Island",
+    note: "Large island park with sports fields, wetlands, paths and waterfront areas.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Randall%27s%20Island%20Park%2C%20Randall%27s%20Island%2C%20Randall%27s%20Island%2C%20Manhattan%2C%20NY",
+    lat: 40.793200,
+    lng: -73.921300
+  },
+  {
+    name: "Carl Schurz Park",
+    type: "parks",
+    area: "Upper East Side, Manhattan",
+    address: "East End Ave, E 84th to E 90th St",
+    note: "Upper East Side waterfront park surrounding Gracie Mansion.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Carl%20Schurz%20Park%2C%20East%20End%20Ave%2C%20E%2084th%20to%20E%2090th%20St%2C%20Upper%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.775000,
+    lng: -73.943500
+  },
+  {
+    name: "John Jay Park",
+    type: "parks",
+    area: "Upper East Side, Manhattan",
+    address: "Cherokee Pl & E 77th St",
+    note: "Upper East Side neighborhood park with pool and playground.",
+    maps: "https://www.google.com/maps/search/?api=1&query=John%20Jay%20Park%2C%20Cherokee%20Pl%20%26%20E%2077th%20St%2C%20Upper%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.769800,
+    lng: -73.949200
+  },
+  {
+    name: "Andrew Haswell Green Park",
+    type: "parks",
+    area: "Upper East Side, Manhattan",
+    address: "E 60th St & East River",
+    note: "East River waterfront park beneath and beside the Queensboro Bridge.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Andrew%20Haswell%20Green%20Park%2C%20E%2060th%20St%20%26%20East%20River%2C%20Upper%20East%20Side%2C%20Manhattan%2C%20NY",
+    lat: 40.760500,
+    lng: -73.953200
+  },
+  {
+    name: "Peter Detmold Park",
+    type: "parks",
+    area: "Midtown, Manhattan",
+    address: "FDR Dr & E 51st St",
+    note: "Small East Midtown park with East River access and a dog run.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Peter%20Detmold%20Park%2C%20FDR%20Dr%20%26%20E%2051st%20St%2C%20Midtown%2C%20Manhattan%2C%20NY",
+    lat: 40.753500,
+    lng: -73.963000
+  },
+  {
+    name: "St. Vartan Park",
+    type: "parks",
+    area: "Murray Hill, Manhattan",
+    address: "1st Ave & E 35th St",
+    note: "Murray Hill neighborhood park with playground and sports space.",
+    maps: "https://www.google.com/maps/search/?api=1&query=St.%20Vartan%20Park%2C%201st%20Ave%20%26%20E%2035th%20St%2C%20Murray%20Hill%2C%20Manhattan%2C%20NY",
+    lat: 40.745800,
+    lng: -73.974000
+  },
+  {
+    name: "Robert Moses Playground",
+    type: "parks",
+    area: "Murray Hill, Manhattan",
+    address: "1st Ave & E 42nd St",
+    note: "East Midtown playground and recreation space near the United Nations.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Robert%20Moses%20Playground%2C%201st%20Ave%20%26%20E%2042nd%20St%2C%20Murray%20Hill%2C%20Manhattan%2C%20NY",
+    lat: 40.748900,
+    lng: -73.970200
+  },
+  {
+    name: "Fort Washington Park",
+    type: "parks",
+    area: "Washington Heights, Manhattan",
+    address: "Hudson River, W 155th to Dyckman St",
+    note: "Hudson waterfront park beneath the George Washington Bridge.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Fort%20Washington%20Park%2C%20Hudson%20River%2C%20W%20155th%20to%20Dyckman%20St%2C%20Washington%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.851000,
+    lng: -73.945700
+  },
+  {
+    name: "J. Hood Wright Park",
+    type: "parks",
+    area: "Washington Heights, Manhattan",
+    address: "Fort Washington Ave & W 173rd St",
+    note: "Washington Heights park with recreation center and dramatic bridge views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=J.%20Hood%20Wright%20Park%2C%20Fort%20Washington%20Ave%20%26%20W%20173rd%20St%2C%20Washington%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.846800,
+    lng: -73.941600
+  },
+  {
+    name: "Highbridge Park",
+    type: "parks",
+    area: "Washington Heights, Manhattan",
+    address: "Amsterdam Ave / Harlem River, W 155th to Dyckman St",
+    note: "Long escarpment park containing the historic High Bridge and woodland trails.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Highbridge%20Park%2C%20Amsterdam%20Ave%20%2F%20Harlem%20River%2C%20W%20155th%20to%20Dyckman%20St%2C%20Washington%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.841000,
+    lng: -73.932100
+  },
+  {
+    name: "Fort Tryon Park",
+    type: "parks",
+    types: ["parks", "gardens"],
+    area: "Inwood, Manhattan",
+    address: "Riverside Dr to Broadway, W 190th to Dyckman St",
+    note: "Hilltop park with Hudson views, the Heather Garden, and The Met Cloisters.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Fort%20Tryon%20Park%2C%20Riverside%20Dr%20to%20Broadway%2C%20W%20190th%20to%20Dyckman%20St%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.862600,
+    lng: -73.931700
+  },
+  {
+    name: "Bennett Park",
+    type: "parks",
+    area: "Washington Heights, Manhattan",
+    address: "Fort Washington Ave & W 183rd St",
+    note: "Small Washington Heights park on Manhattan's highest natural point.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Bennett%20Park%2C%20Fort%20Washington%20Ave%20%26%20W%20183rd%20St%2C%20Washington%20Heights%2C%20Manhattan%2C%20NY",
+    lat: 40.852000,
+    lng: -73.938800
+  },
+  {
+    name: "Inwood Hill Park",
+    type: "parks",
+    area: "Inwood, Manhattan",
+    address: "Dyckman St to Spuyten Duyvil, Hudson River to Payson Ave",
+    note: "Large natural-area park with old-growth forest, salt marsh and trails.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Inwood%20Hill%20Park%2C%20Dyckman%20St%20to%20Spuyten%20Duyvil%2C%20Hudson%20River%20to%20Payson%20Ave%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.872300,
+    lng: -73.925700
+  },
+  {
+    name: "Isham Park",
+    type: "parks",
+    area: "Inwood, Manhattan",
+    address: "Broadway & Isham St",
+    note: "Hilly Inwood park with lawns and exposed Manhattan schist.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Isham%20Park%2C%20Broadway%20%26%20Isham%20St%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.869200,
+    lng: -73.919800
+  },
+  {
+    name: "Muscota Marsh",
+    type: "parks",
+    area: "Inwood, Manhattan",
+    address: "W 218th St & Indian Rd",
+    note: "Small restored salt-marsh park beside Columbia's Baker Athletics Complex.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Muscota%20Marsh%2C%20W%20218th%20St%20%26%20Indian%20Rd%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.877600,
+    lng: -73.922200
+  },
+  {
+    name: "Swindler Cove Park",
+    type: "parks",
+    area: "Inwood, Manhattan",
+    address: "Harlem River Dr & Dyckman St",
+    note: "Five-acre waterfront park with woodland, wetlands and educational facilities.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Swindler%20Cove%20Park%2C%20Harlem%20River%20Dr%20%26%20Dyckman%20St%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.860100,
+    lng: -73.921900
+  },
+  {
+    name: "Sherman Creek Park",
+    type: "parks",
+    area: "Inwood, Manhattan",
+    address: "Harlem River Dr near Dyckman St",
+    note: "Harlem River waterfront green space with paths and ecological restoration.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sherman%20Creek%20Park%2C%20Harlem%20River%20Dr%20near%20Dyckman%20St%2C%20Inwood%2C%20Manhattan%2C%20NY",
+    lat: 40.860600,
+    lng: -73.922500
+  },
+  {
+    name: "Franklin D. Roosevelt Four Freedoms Park",
+    type: "parks",
+    area: "Roosevelt Island, Manhattan",
+    address: "1 FDR Four Freedoms Park",
+    note: "Memorial park at the southern tip of Roosevelt Island with skyline views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Franklin%20D.%20Roosevelt%20Four%20Freedoms%20Park%2C%201%20FDR%20Four%20Freedoms%20Park%2C%20Roosevelt%20Island%2C%20Manhattan%2C%20NY",
+    lat: 40.750600,
+    lng: -73.960200
+  },
+  {
+    name: "Southpoint Park",
+    type: "parks",
+    area: "Roosevelt Island, Manhattan",
+    address: "Roosevelt Island",
+    note: "Waterfront park on Roosevelt Island with lawns, ruins and skyline views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Southpoint%20Park%2C%20Roosevelt%20Island%2C%20NY",
+    lat: 40.751600,
+    lng: -73.959400
+  },
+  {
+    name: "Lighthouse Park",
+    type: "parks",
+    area: "Roosevelt Island, Manhattan",
+    address: "Roosevelt Island",
+    note: "Northern-tip Roosevelt Island park surrounding the historic lighthouse.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Lighthouse%20Park%2C%20Roosevelt%20Island%2C%20NY",
+    lat: 40.772400,
+    lng: -73.940700
+  },
+  {
+    name: "Octagon Park",
+    type: "parks",
+    area: "Roosevelt Island, Manhattan",
+    address: "Roosevelt Island",
+    note: "Waterfront green space near The Octagon on Roosevelt Island.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Octagon%20Park%2C%20Roosevelt%20Island%2C%20NY",
+    lat: 40.769900,
+    lng: -73.943400
+  },
+  {
+    name: "Governors Island",
+    type: "parks",
+    area: "Governors Island, Manhattan",
+    address: "Governors Island",
+    note: "Car-free island parkland with lawns, historic areas, art and harbor views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Governors%20Island%2C%20New%20York%2C%20NY",
+    lat: 40.689500,
+    lng: -74.016800
+  },
+  {
+    name: "The Hills - Governors Island",
+    type: "parks",
+    area: "Governors Island, Manhattan",
+    address: "Governors Island",
+    note: "Four sculpted hills with paths, slides and panoramic harbor views.",
+    maps: "https://www.google.com/maps/search/?api=1&query=The%20Hills%2C%20Governors%20Island%2C%20NY",
+    lat: 40.689400,
+    lng: -74.019100
+  },
+  {
+    name: "Hammock Grove - Governors Island",
+    type: "parks",
+    area: "Governors Island, Manhattan",
+    address: "Governors Island",
+    note: "Shaded lawn and tree grove designed for hammocks and relaxation.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hammock%20Grove%2C%20Governors%20Island%2C%20NY",
+    lat: 40.690300,
+    lng: -74.018200
+  },
+  {
+    name: "Colonels Row Green - Governors Island",
+    type: "parks",
+    area: "Governors Island, Manhattan",
+    address: "Governors Island",
+    note: "Open lawn framed by historic officers' houses.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Colonels%20Row%20Green%2C%20Governors%20Island%2C%20NY",
+    lat: 40.691500,
+    lng: -74.016300
+  },
+  {
+    name: "Nolan Park - Governors Island",
+    type: "parks",
+    area: "Governors Island, Manhattan",
+    address: "Governors Island",
+    note: "Historic green surrounded by yellow officers' houses and cultural spaces.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Nolan%20Park%2C%20Governors%20Island%2C%20NY",
+    lat: 40.691700,
+    lng: -74.014800
+  },
+  {
+    name: "Teardrop Park",
+    type: "parks",
+    area: "Battery Park City, Manhattan",
+    address: "Murray St & North End Ave",
+    note: "Battery Park City park with rockwork, water features and play areas.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Teardrop%20Park%2C%20Murray%20St%20%26%20North%20End%20Ave%2C%20Battery%20Park%20City%2C%20Manhattan%2C%20NY",
+    lat: 40.716400,
+    lng: -74.015700
+  },
+  {
+    name: "Rockefeller Park",
+    type: "parks",
+    area: "Battery Park City, Manhattan",
+    address: "River Terrace & Warren St",
+    note: "Battery Park City waterfront park with large lawn, playground and gardens.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Rockefeller%20Park%2C%20River%20Terrace%20%26%20Warren%20St%2C%20Battery%20Park%20City%2C%20Manhattan%2C%20NY",
+    lat: 40.717900,
+    lng: -74.016800
+  },
+  {
+    name: "Wagner Park",
+    type: "parks",
+    area: "Battery Park City, Manhattan",
+    address: "Battery Pl & West St",
+    note: "Battery Park City waterfront lawn and garden area.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Wagner%20Park%2C%20Battery%20Pl%20%26%20West%20St%2C%20Battery%20Park%20City%2C%20Manhattan%2C%20NY",
+    lat: 40.704500,
+    lng: -74.017900
+  }
 ]
 </script>
 <script id="map-data">
@@ -1967,7 +3592,9 @@ const TYPE_META = {
   michelin: { label: "Michelin", color: "#BE1E2D", ink: "#fff" },
   bar: { label: "Bar", color: "#6E3A6B", ink: "#fff" },
   outdoors: { label: "Outdoors", color: "#2E6B4F", ink: "#fff" },
+  "rooftop-garden": { label: "Rooftop garden", color: "#B25A3C", ink: "#fff" },
   gardens: { label: "Gardens", color: "#3E8C4A", ink: "#fff" },
+  parks: { label: "Parks", color: "#1E5C48", ink: "#fff" },
   museum: { label: "Museum", color: "#314E8E", ink: "#fff" },
   books: { label: "Books", color: "#1F6F8B", ink: "#fff" },
   show: { label: "Shows", color: "#C45C26", ink: "#fff" }
@@ -2006,7 +3633,9 @@ const ICONS = {
   restaurant: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 4v7M6 4v4a2 2 0 0 0 4 0V4M8 11v9M16 4c1.5 2 2 4 2 6s-.8 3-2 3v7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   michelin: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 15c1.5 3 4 4.5 7 4.5S17.5 18 19 15M4 13h16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   outdoors: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20v-6M8 20h8M12 14l-5-6h10l-5 6zM12 8l-3.2-4h6.4L12 8z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
+  "rooftop-garden": '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 11l8-6 8 6M7 11v8h10v-8M12 16c-1.6-.2-2.6-1.2-2.6-2.4 1.2.1 2 .8 2.6 1.6.6-.8 1.4-1.5 2.6-1.6 0 1.2-1 2.2-2.6 2.4z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
   gardens: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20V12M8 20h8M12 13c-2.8-.4-5-2.4-5-5 2.4.2 4 1.6 5 3.2C13 9.6 14.6 8.2 17 8c0 2.6-2.2 4.6-5 5z" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  parks: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21v-6M9 21h6M12 15c-2.8 0-4.5-2-4.5-4.2C7.5 8 9.4 6.2 12 6.2s4.5 1.8 4.5 4.6C16.5 13 14.8 15 12 15z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
   museum: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 10h16M6 10v7M10 10v7M14 10v7M18 10v7M5 17h14M12 4l8 4H4l8-4z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
   bar: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 4h8l-1.2 6.2A2.8 2.8 0 0 1 12 13a2.8 2.8 0 0 1-2.8-2.8L8 4zM12 13v5M9 20h6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   books: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 4.5h11.5V19H8A2 2 0 0 0 6 21V4.5zM6 19h11.5" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
@@ -2227,7 +3856,7 @@ if (!window.L) {
   if (hashType && PLACES.some((place) => placeTypes(place).includes(hashType))) active = hashType;
 
   function typesInUse() {
-    const preferred = ["breakfast", "coffee", "restaurant", "michelin", "bar", "outdoors", "gardens", "museum", "books", "show"];
+    const preferred = ["breakfast", "coffee", "restaurant", "michelin", "bar", "outdoors", "rooftop-garden", "gardens", "parks", "museum", "books", "show"];
     const present = [...new Set(PLACES.flatMap(placeTypes))];
     return preferred.filter((type) => present.includes(type))
       .concat(present.filter((type) => !preferred.includes(type)).sort());
