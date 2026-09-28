@@ -315,6 +315,8 @@
   .area { color: var(--muted); font-size: 14px; }
   .note { font-size: 16px; }
   .addr { color: var(--muted); font-size: 14px; }
+  .maps { margin: 12px 0 0; }
+  .maps a { font-weight: 650; color: var(--ink); }
   .icon-btn {
     flex: none;
     min-width: 72px;
@@ -415,9 +417,11 @@ const PLACES = [
   {
     name: "Vato",
     type: "restaurant",
+    types: ["restaurant", "michelin"],
     area: "Park Slope, Brooklyn",
     address: "226 7th Ave",
-    note: "Daytime tortilleria from the Corima team. Flour-tortilla burritos and pastries. Walk in, Thursday through Monday, about 7am to 3pm. Closed Tuesday and Wednesday.",
+    note: "Daytime tortilleria from the Corima team. Flour-tortilla burritos and pastries. Walk in, Thursday through Monday, about 7am to 3pm. Closed Tuesday and Wednesday. Michelin Guide, moderate spend.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Vato%2C%20226%207th%20Ave%2C%20Park%20Slope%2C%20Brooklyn%2C%20NY",
     lat: 40.670230,
     lng: -73.979001
   },
@@ -645,7 +649,1267 @@ const PLACES = [
     note: "Same-day Broadway and Off-Broadway tickets, often up to half off, at the booth under the red steps. Hours change by day. A second booth is at Lincoln Center, 61 W 62nd Street. Lotteries are separate: enter online the day before, through Lucky Seat or Broadway Direct.",
     lat: 40.759062,
     lng: -73.985167
-  }
+},
+  {
+    name: "Cha Kee",
+    type: "michelin",
+    area: "Manhattan",
+    address: "43 Mott St",
+    note: "Michelin Guide. Moderate spend. Asian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Cha%20Kee%2C%2043%20Mott%20St%2C%20New%20York%2C%20NY",
+    lat: 40.715234,
+    lng: -73.998977
+  },
+  {
+    name: "Lei",
+    type: "michelin",
+    area: "Manhattan",
+    address: "15 Doyers St",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Lei%2C%2015%20Doyers%20St%2C%20New%20York%2C%20NY",
+    lat: 40.714548,
+    lng: -73.998189
+  },
+  {
+    name: "Dim Sum Go Go",
+    type: "michelin",
+    area: "Manhattan",
+    address: "5 East Broadway",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dim%20Sum%20Go%20Go%2C%205%20East%20Broadway%2C%20New%20York%2C%20NY",
+    lat: 40.713242,
+    lng: -73.997728
+  },
+  {
+    name: "Nyonya",
+    type: "michelin",
+    area: "Manhattan",
+    address: "199 Grand St",
+    note: "Michelin Guide. On a budget. Malaysian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Nyonya%2C%20199%20Grand%20St%2C%20New%20York%2C%20NY",
+    lat: 40.719061,
+    lng: -73.996883
+  },
+  {
+    name: "Thai Diner",
+    type: "michelin",
+    area: "Manhattan",
+    address: "186 Mott St",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Thai%20Diner%2C%20186%20Mott%20St%2C%20New%20York%2C%20NY",
+    lat: 40.720744,
+    lng: -73.995702
+  },
+  {
+    name: "Potluck Club",
+    type: "michelin",
+    area: "Manhattan",
+    address: "133 Chrystie St",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Potluck%20Club%2C%20133%20Chrystie%20St%2C%20New%20York%2C%20NY",
+    lat: 40.719519,
+    lng: -73.99333
+  },
+  {
+    name: "Tolo",
+    type: "michelin",
+    area: "Manhattan",
+    address: "28 Canal St",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tolo%2C%2028%20Canal%20St%2C%20New%20York%2C%20NY",
+    lat: 40.714315,
+    lng: -73.990508
+  },
+  {
+    name: "Pinch Chinese",
+    type: "michelin",
+    area: "Manhattan",
+    address: "177 Prince St",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pinch%20Chinese%2C%20177%20Prince%20St%2C%20New%20York%2C%20NY",
+    lat: 40.726448,
+    lng: -74.001799
+  },
+  {
+    name: "Russ & Daughters Cafe",
+    type: "michelin",
+    area: "Manhattan",
+    address: "127 Orchard St",
+    note: "Michelin Guide. Moderate spend. American.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Russ%20%26%20Daughters%20Cafe%2C%20127%20Orchard%20St%2C%20New%20York%2C%20NY",
+    lat: 40.719639,
+    lng: -73.989563
+  },
+  {
+    name: "Dhamaka",
+    type: "michelin",
+    area: "Manhattan",
+    address: "119 Delancey St",
+    note: "Michelin Guide. Moderate spend. Indian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dhamaka%2C%20119%20Delancey%20St%2C%20New%20York%2C%20NY",
+    lat: 40.718235,
+    lng: -73.988078
+  },
+  {
+    name: "8282",
+    type: "michelin",
+    area: "Manhattan",
+    address: "84 Stanton St",
+    note: "Michelin Guide. Moderate spend. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=8282%2C%2084%20Stanton%20St%2C%20New%20York%2C%20NY",
+    lat: 40.721651,
+    lng: -73.988822
+  },
+  {
+    name: "Laliko",
+    type: "michelin",
+    area: "Manhattan",
+    address: "80 Carmine St",
+    note: "Michelin Guide. Moderate spend. Central Asian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Laliko%2C%2080%20Carmine%20St%2C%20New%20York%2C%20NY",
+    lat: 40.729459,
+    lng: -74.004824
+  },
+  {
+    name: "C as in Charlie",
+    type: "michelin",
+    area: "Manhattan",
+    address: "5 Bleecker St",
+    note: "Michelin Guide. Moderate spend. Fusion.",
+    maps: "https://www.google.com/maps/search/?api=1&query=C%20as%20in%20Charlie%2C%205%20Bleecker%20St%2C%20New%20York%2C%20NY",
+    lat: 40.725463,
+    lng: -73.992707
+  },
+  {
+    name: "Una Pizza Napoletana",
+    type: "michelin",
+    area: "Manhattan",
+    address: "175 Orchard St",
+    note: "Michelin Guide. Moderate spend. Pizza.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Una%20Pizza%20Napoletana%2C%20175%20Orchard%20St%2C%20New%20York%2C%20NY",
+    lat: 40.721717,
+    lng: -73.9885
+  },
+  {
+    name: "Sami & Susu",
+    type: "michelin",
+    area: "Manhattan",
+    address: "190 Orchard St",
+    note: "Michelin Guide. Moderate spend. Mediterranean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sami%20%26%20Susu%2C%20190%20Orchard%20St%2C%20New%20York%2C%20NY",
+    lat: 40.72211,
+    lng: -73.988075
+  },
+  {
+    name: "MayRee",
+    type: "michelin",
+    area: "Manhattan",
+    address: "58 E 1st St",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=MayRee%2C%2058%20E%201st%20St%2C%20New%20York%2C%20NY",
+    lat: 40.723753,
+    lng: -73.989287
+  },
+  {
+    name: "Nami Nori",
+    type: "michelin",
+    area: "Manhattan",
+    address: "33 Carmine St",
+    note: "Michelin Guide. On a budget. Japanese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Nami%20Nori%2C%2033%20Carmine%20St%2C%20New%20York%2C%20NY",
+    lat: 40.730209,
+    lng: -74.003275
+  },
+  {
+    name: "Katz's",
+    type: "michelin",
+    area: "Manhattan",
+    address: "205 East Houston St",
+    note: "Michelin Guide. On a budget. Deli.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Katz%27s%2C%20205%20East%20Houston%20St%2C%20New%20York%2C%20NY",
+    lat: 40.722343,
+    lng: -73.987353
+  },
+  {
+    name: "Ivan Ramen",
+    type: "michelin",
+    area: "Manhattan",
+    address: "25 Clinton St",
+    note: "Michelin Guide. Moderate spend. Japanese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Ivan%20Ramen%2C%2025%20Clinton%20St%2C%20New%20York%2C%20NY",
+    lat: 40.720542,
+    lng: -73.984442
+  },
+  {
+    name: "Little Myanmar",
+    type: "michelin",
+    area: "Manhattan",
+    address: "150 E 2nd St",
+    note: "Michelin Guide. Moderate spend. Burmese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Little%20Myanmar%2C%20150%20E%202nd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.722948,
+    lng: -73.985398
+  },
+  {
+    name: "Via Carota",
+    type: "michelin",
+    area: "Manhattan",
+    address: "51 Grove St",
+    note: "Michelin Guide. Moderate spend. Italian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Via%20Carota%2C%2051%20Grove%20St%2C%20New%20York%2C%20NY",
+    lat: 40.73311,
+    lng: -74.00365
+  },
+  {
+    name: "CheLi",
+    type: "michelin",
+    area: "Manhattan",
+    address: "19 St Marks Pl",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=CheLi%2C%2019%20St%20Marks%20Pl%2C%20New%20York%2C%20NY",
+    lat: 40.729198,
+    lng: -73.988769
+  },
+  {
+    name: "Soda Club",
+    type: "michelin",
+    area: "Manhattan",
+    address: "155 Ave B",
+    note: "Michelin Guide. Moderate spend. Vegan.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Soda%20Club%2C%20155%20Ave%20B%2C%20New%20York%2C%20NY",
+    lat: 40.726691,
+    lng: -73.979895
+  },
+  {
+    name: "MáLà Project",
+    type: "michelin",
+    area: "Manhattan",
+    address: "122 1st Ave",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=M%C3%A1L%C3%A0%20Project%2C%20122%201st%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.727105,
+    lng: -73.98536
+  },
+  {
+    name: "Nudibranch",
+    type: "michelin",
+    area: "Manhattan",
+    address: "125 1st Ave",
+    note: "Michelin Guide. Moderate spend. Contemporary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Nudibranch%2C%20125%201st%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.727404,
+    lng: -73.985678
+  },
+  {
+    name: "Ruffian",
+    type: "michelin",
+    area: "Manhattan",
+    address: "125 E 7th St",
+    note: "Michelin Guide. Moderate spend. Contemporary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Ruffian%2C%20125%20E%207th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.726541,
+    lng: -73.984009
+  },
+  {
+    name: "Noreetuh",
+    type: "michelin",
+    area: "Manhattan",
+    address: "128 1st Ave",
+    note: "Michelin Guide. Moderate spend. Fusion.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Noreetuh%2C%20128%201st%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.72731,
+    lng: -73.98529
+  },
+  {
+    name: "Miss Lily's",
+    type: "michelin",
+    area: "Manhattan",
+    address: "132 West Houston St",
+    note: "Michelin Guide. Moderate spend. Jamaican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Miss%20Lily%27s%2C%20132%20West%20Houston%20St%2C%20New%20York%2C%20NY",
+    lat: 40.727984,
+    lng: -74.001356
+  },
+  {
+    name: "Avant Garden",
+    type: "michelin",
+    area: "Manhattan",
+    address: "95 Ave A",
+    note: "Michelin Guide. Moderate spend. Vegan.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Avant%20Garden%2C%2095%20Ave%20A%2C%20New%20York%2C%20NY",
+    lat: 40.725644,
+    lng: -73.984015
+  },
+  {
+    name: "Sobaya",
+    type: "michelin",
+    area: "Manhattan",
+    address: "229 E 9th St",
+    note: "Michelin Guide. On a budget. Japanese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sobaya%2C%20229%20E%209th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.729675,
+    lng: -73.987867
+  },
+  {
+    name: "Superiority Burger",
+    type: "michelin",
+    area: "Manhattan",
+    address: "119 Ave A",
+    note: "Michelin Guide. Moderate spend. Vegetarian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Superiority%20Burger%2C%20119%20Ave%20A%2C%20New%20York%2C%20NY",
+    lat: 40.726447,
+    lng: -73.983431
+  },
+  {
+    name: "Kubeh",
+    type: "michelin",
+    area: "Manhattan",
+    address: "464 6th Ave",
+    note: "Michelin Guide. Moderate spend. Middle Eastern.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Kubeh%2C%20464%206th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.73546,
+    lng: -73.998001
+  },
+  {
+    name: "Momofuku Noodle Bar",
+    type: "michelin",
+    area: "Manhattan",
+    address: "171 1st Ave",
+    note: "Michelin Guide. Moderate spend. Asian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Momofuku%20Noodle%20Bar%2C%20171%201st%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.729186,
+    lng: -73.984379
+  },
+  {
+    name: "Al Badawi",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "151 Atlantic Ave",
+    note: "Michelin Guide. Moderate spend. Middle Eastern.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Al%20Badawi%2C%20151%20Atlantic%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.690595,
+    lng: -73.995038
+  },
+  {
+    name: "Bánh Anh Em",
+    type: "michelin",
+    area: "Manhattan",
+    address: "99 3rd Ave",
+    note: "Michelin Guide. Moderate spend. Vietnamese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=B%C3%A1nh%20Anh%20Em%2C%2099%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.732291,
+    lng: -73.987672
+  },
+  {
+    name: "Yellow Rose",
+    type: "michelin",
+    area: "Manhattan",
+    address: "102 3rd Ave",
+    note: "Michelin Guide. Moderate spend. Tex-Mex.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Yellow%20Rose%2C%20102%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.732507,
+    lng: -73.987978
+  },
+  {
+    name: "Soothr",
+    type: "michelin",
+    area: "Manhattan",
+    address: "204 E 13th St",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Soothr%2C%20204%20E%2013th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.732327,
+    lng: -73.987324
+  },
+  {
+    name: "La Vara",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "268 Clinton St",
+    note: "Michelin Guide. Moderate spend. Spanish.",
+    maps: "https://www.google.com/maps/search/?api=1&query=La%20Vara%2C%20268%20Clinton%20St%2C%20New%20York%2C%20NY",
+    lat: 40.687792,
+    lng: -73.995698
+  },
+  {
+    name: "La Dong",
+    type: "michelin",
+    area: "Manhattan",
+    address: "11 E 17th St",
+    note: "Michelin Guide. Moderate spend. Vietnamese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=La%20Dong%2C%2011%20E%2017th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.737643,
+    lng: -73.991251
+  },
+  {
+    name: "Len Len",
+    type: "michelin",
+    area: "Manhattan",
+    address: "40 E 20th St",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Len%20Len%2C%2040%20E%2020th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.738467,
+    lng: -73.988598
+  },
+  {
+    name: "Mile End Delicatessen",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "97A Hoyt St",
+    note: "Michelin Guide. On a budget. Deli.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Mile%20End%20Delicatessen%2C%2097A%20Hoyt%20St%2C%20New%20York%2C%20NY",
+    lat: 40.687491,
+    lng: -73.987062
+  },
+  {
+    name: "Untable",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "529 Henry St",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Untable%2C%20529%20Henry%20St%2C%20New%20York%2C%20NY",
+    lat: 40.68357,
+    lng: -73.999445
+  },
+  {
+    name: "Coqodaq",
+    type: "michelin",
+    area: "Manhattan",
+    address: "12 E 22nd St",
+    note: "Michelin Guide. Moderate spend. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Coqodaq%2C%2012%20E%2022nd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.740122,
+    lng: -73.988654
+  },
+  {
+    name: "Los Burritos Juárez",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "354 Myrtle Ave",
+    note: "Michelin Guide. On a budget. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Los%20Burritos%20Ju%C3%A1rez%2C%20354%20Myrtle%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.693105,
+    lng: -73.972096
+  },
+  {
+    name: "Miss Ada",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "184 DeKalb Ave",
+    note: "Michelin Guide. Moderate spend. Israeli.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Miss%20Ada%2C%20184%20DeKalb%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.68948,
+    lng: -73.972383
+  },
+  {
+    name: "Norma Gastronomia Siciliana",
+    type: "michelin",
+    area: "Manhattan",
+    address: "438 3rd Ave",
+    note: "Michelin Guide. Moderate spend. Italian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Norma%20Gastronomia%20Siciliana%2C%20438%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.74354,
+    lng: -73.980013
+  },
+  {
+    name: "Theodora",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "7 Greene Ave",
+    note: "Michelin Guide. Moderate spend. Mediterranean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Theodora%2C%207%20Greene%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.686001,
+    lng: -73.973038
+  },
+  {
+    name: "HanGawi",
+    type: "michelin",
+    area: "Manhattan",
+    address: "12 E 32nd St",
+    note: "Michelin Guide. Moderate spend. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=HanGawi%2C%2012%20E%2032nd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.746692,
+    lng: -73.98469
+  },
+  {
+    name: "Dons Bogam",
+    type: "michelin",
+    area: "Manhattan",
+    address: "17 E 32nd St",
+    note: "Michelin Guide. Moderate spend. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dons%20Bogam%2C%2017%20E%2032nd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.746788,
+    lng: -73.984369
+  },
+  {
+    name: "Hometown Bar-B-Que",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "454 Van Brunt St",
+    note: "Michelin Guide. Moderate spend. Barbecue.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hometown%20Bar-B-Que%2C%20454%20Van%20Brunt%20St%2C%20New%20York%2C%20NY",
+    lat: 40.674926,
+    lng: -74.016126
+  },
+  {
+    name: "Octo",
+    type: "michelin",
+    area: "Manhattan",
+    address: "1 E 33rd St",
+    note: "Michelin Guide. Moderate spend. Asian Contemporary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Octo%2C%201%20E%2033rd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.74765,
+    lng: -73.984502
+  },
+  {
+    name: "Runner & Stone",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "285 3rd Ave",
+    note: "Michelin Guide. Moderate spend. Contemporary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Runner%20%26%20Stone%2C%20285%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.677224,
+    lng: -73.985963
+  },
+  {
+    name: "Shalom Japan",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "310 S 4th St",
+    note: "Michelin Guide. Moderate spend. Fusion.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Shalom%20Japan%2C%20310%20S%204th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.709204,
+    lng: -73.955836
+  },
+  {
+    name: "Sawa",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "75 5th Ave",
+    note: "Michelin Guide. Moderate spend. Middle Eastern.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sawa%2C%2075%205th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.680421,
+    lng: -73.977512
+  },
+  {
+    name: "Lingo",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "27 Greenpoint Ave",
+    note: "Michelin Guide. Moderate spend. Japanese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Lingo%2C%2027%20Greenpoint%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.729816,
+    lng: -73.959716
+  },
+  {
+    name: "Cho Dang Gol",
+    type: "michelin",
+    area: "Manhattan",
+    address: "55 W 35th St",
+    note: "Michelin Guide. Moderate spend. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Cho%20Dang%20Gol%2C%2055%20W%2035th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.750171,
+    lng: -73.986344
+  },
+  {
+    name: "Tonchin",
+    type: "michelin",
+    area: "Manhattan",
+    address: "13 W 36th St",
+    note: "Michelin Guide. On a budget. Japanese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tonchin%2C%2013%20W%2036th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.750229,
+    lng: -73.984535
+  },
+  {
+    name: "Little Alley",
+    type: "michelin",
+    area: "Manhattan",
+    address: "550 3rd Ave",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Little%20Alley%2C%20550%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.747385,
+    lng: -73.977153
+  },
+  {
+    name: "Entre Nous",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "39 Clifton Pl",
+    note: "Michelin Guide. Moderate spend. French.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Entre%20Nous%2C%2039%20Clifton%20Pl%2C%20New%20York%2C%20NY",
+    lat: 40.687933,
+    lng: -73.962875
+  },
+  {
+    name: "Haenyeo",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "239 5th Ave",
+    note: "Michelin Guide. Moderate spend. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Haenyeo%2C%20239%205th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.675177,
+    lng: -73.981139
+  },
+  {
+    name: "Kjun",
+    type: "michelin",
+    area: "Manhattan",
+    address: "154 E 39th St",
+    note: "Michelin Guide. On a budget. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Kjun%2C%20154%20E%2039th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.748963,
+    lng: -73.976338
+  },
+  {
+    name: "Peppercorn Station",
+    type: "michelin",
+    area: "Manhattan",
+    address: "66 W 39th St",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Peppercorn%20Station%2C%2066%20W%2039th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.752571,
+    lng: -73.985179
+  },
+  {
+    name: "Szechuan Gourmet",
+    type: "michelin",
+    area: "Manhattan",
+    address: "21 W 39th St",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Szechuan%20Gourmet%2C%2021%20W%2039th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.752356,
+    lng: -73.983549
+  },
+  {
+    name: "Speedy Romeo",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "376 Classon Ave",
+    note: "Michelin Guide. Moderate spend. Pizza.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Speedy%20Romeo%2C%20376%20Classon%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.687503,
+    lng: -73.959871
+  },
+  {
+    name: "Taqueria El Chato",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "620 Manhattan Ave",
+    note: "Michelin Guide. On a budget. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Taqueria%20El%20Chato%2C%20620%20Manhattan%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.72356,
+    lng: -73.950523
+  },
+  {
+    name: "Alta Calidad",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "552 Vanderbilt Ave",
+    note: "Michelin Guide. Moderate spend. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Alta%20Calidad%2C%20552%20Vanderbilt%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.680109,
+    lng: -73.968196
+  },
+  {
+    name: "Pierozek",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "592 Manhattan Ave",
+    note: "Michelin Guide. Moderate spend. Polish.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pierozek%2C%20592%20Manhattan%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.723001,
+    lng: -73.950217
+  },
+  {
+    name: "Izakaya Futago",
+    type: "michelin",
+    area: "Manhattan",
+    address: "211 E 43rd St",
+    note: "Michelin Guide. Moderate spend. Japanese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Izakaya%20Futago%2C%20211%20E%2043rd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.751372,
+    lng: -73.97364
+  },
+  {
+    name: "Balera",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "442 Graham Ave",
+    note: "Michelin Guide. On a budget. Italian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Balera%2C%20442%20Graham%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.718338,
+    lng: -73.944692
+  },
+  {
+    name: "Hart's",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "506 Franklin Ave",
+    note: "Michelin Guide. Moderate spend. Mediterranean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hart%27s%2C%20506%20Franklin%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.681597,
+    lng: -73.955871
+  },
+  {
+    name: "Casa Enrique",
+    type: "michelin",
+    area: "Queens",
+    address: "5-48 49th Ave",
+    note: "Michelin Guide. Moderate spend. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Casa%20Enrique%2C%205-48%2049th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.743362,
+    lng: -73.954228
+  },
+  {
+    name: "Hupo",
+    type: "michelin",
+    area: "Queens",
+    address: "1007 50th Ave",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hupo%2C%201007%2050th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.742687,
+    lng: -73.953579
+  },
+  {
+    name: "Runner Up",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "499 11th St",
+    note: "Michelin Guide. Moderate spend. American.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Runner%20Up%2C%20499%2011th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.66563,
+    lng: -73.982207
+  },
+  {
+    name: "Kung Fu Little Steamed Buns Ramen",
+    type: "michelin",
+    area: "Manhattan",
+    address: "811 8th Ave",
+    note: "Michelin Guide. On a budget. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Kung%20Fu%20Little%20Steamed%20Buns%20Ramen%2C%20811%208th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.761615,
+    lng: -73.986844
+  },
+  {
+    name: "See No Evil Pizza",
+    type: "michelin",
+    area: "Manhattan",
+    address: "210 W 50th St",
+    note: "Michelin Guide. Moderate spend. Pizza.",
+    maps: "https://www.google.com/maps/search/?api=1&query=See%20No%20Evil%20Pizza%2C%20210%20W%2050th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.761493,
+    lng: -73.98446
+  },
+  {
+    name: "Don Antonio",
+    type: "michelin",
+    area: "Manhattan",
+    address: "309 W 50th St",
+    note: "Michelin Guide. Moderate spend. Pizza.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Don%20Antonio%2C%20309%20W%2050th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.762639,
+    lng: -73.986655
+  },
+  {
+    name: "Cafe Mado",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "791 Washington Ave",
+    note: "Michelin Guide. On a budget. American Contemporary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Cafe%20Mado%2C%20791%20Washington%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.67291,
+    lng: -73.962584
+  },
+  {
+    name: "LORE",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "441 7th Ave",
+    note: "Michelin Guide. Moderate spend. Contemporary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=LORE%2C%20441%207th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.66313,
+    lng: -73.984519
+  },
+  {
+    name: "Hyderabadi Zaiqa",
+    type: "michelin",
+    area: "Manhattan",
+    address: "785 9th Ave",
+    note: "Michelin Guide. On a budget. Indian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Hyderabadi%20Zaiqa%2C%20785%209th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.76508,
+    lng: -73.988145
+  },
+  {
+    name: "Chavela's",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "736 Franklin Ave",
+    note: "Michelin Guide. Moderate spend. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Chavela%27s%2C%20736%20Franklin%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.673432,
+    lng: -73.957133
+  },
+  {
+    name: "Roberta's",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "261 Moore St",
+    note: "Michelin Guide. Moderate spend. Pizza.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Roberta%27s%2C%20261%20Moore%20St%2C%20New%20York%2C%20NY",
+    lat: 40.705006,
+    lng: -73.933589
+  },
+  {
+    name: "Sobre Masa",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "52 Harrison Pl",
+    note: "Michelin Guide. Moderate spend. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Sobre%20Masa%2C%2052%20Harrison%20Pl%2C%20New%20York%2C%20NY",
+    lat: 40.706336,
+    lng: -73.931361
+  },
+  {
+    name: "Daphne's",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "299 Halsey St",
+    note: "Michelin Guide. Moderate spend. Italian-American.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Daphne%27s%2C%20299%20Halsey%20St%2C%20New%20York%2C%20NY",
+    lat: 40.682896,
+    lng: -73.941091
+  },
+  {
+    name: "Lungi",
+    type: "michelin",
+    area: "Manhattan",
+    address: "1136 1st Ave",
+    note: "Michelin Guide. Moderate spend. Sri Lankan.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Lungi%2C%201136%201st%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.761691,
+    lng: -73.960224
+  },
+  {
+    name: "Vert Frais",
+    type: "michelin",
+    area: "Long Island City",
+    address: "43-10 Crescent St",
+    note: "Michelin Guide. Moderate spend. Japanese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Vert%20Frais%2C%2043-10%20Crescent%20St%2C%20New%20York%2C%20NY",
+    lat: 40.748689,
+    lng: -73.942802
+  },
+  {
+    name: "Tong",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "321 Starr St",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tong%2C%20321%20Starr%20St%2C%20New%20York%2C%20NY",
+    lat: 40.707848,
+    lng: -73.920557
+  },
+  {
+    name: "Risbo",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "701 Flatbush Ave",
+    note: "Michelin Guide. Moderate spend. French.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Risbo%2C%20701%20Flatbush%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.656055,
+    lng: -73.959704
+  },
+  {
+    name: "Bohemian Spirit",
+    type: "michelin",
+    area: "Manhattan",
+    address: "321 E 73rd St",
+    note: "Michelin Guide. Moderate spend. Czech.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Bohemian%20Spirit%2C%20321%20E%2073rd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.769058,
+    lng: -73.95659
+  },
+  {
+    name: "Persepolis",
+    type: "michelin",
+    area: "Manhattan",
+    address: "1407 2nd Ave",
+    note: "Michelin Guide. Moderate spend. Persian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Persepolis%2C%201407%202nd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.769773,
+    lng: -73.957888
+  },
+  {
+    name: "Gordo's Cantina",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "140 Saint Nicholas Ave",
+    note: "Michelin Guide. Moderate spend. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Gordo%27s%20Cantina%2C%20140%20Saint%20Nicholas%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.704934,
+    lng: -73.91759
+  },
+  {
+    name: "J.G. Melon",
+    type: "michelin",
+    area: "Manhattan",
+    address: "1291 3rd Ave",
+    note: "Michelin Guide. On a budget. American.",
+    maps: "https://www.google.com/maps/search/?api=1&query=J.G.%20Melon%2C%201291%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.771073,
+    lng: -73.959371
+  },
+  {
+    name: "Bolivian Llama Party",
+    type: "michelin",
+    area: "Woodside",
+    address: "44-14 48th Ave",
+    note: "Michelin Guide. Moderate spend. South American.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Bolivian%20Llama%20Party%2C%2044-14%2048th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.739447,
+    lng: -73.921147
+  },
+  {
+    name: "Covacha",
+    type: "michelin",
+    area: "Manhattan",
+    address: "368 Columbus Ave",
+    note: "Michelin Guide. Moderate spend. Mexican.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Covacha%2C%20368%20Columbus%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.780967,
+    lng: -73.976432
+  },
+  {
+    name: "Cardamom",
+    type: "michelin",
+    area: "Queens",
+    address: "43-45 43rd St",
+    note: "Michelin Guide. Moderate spend. Indian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Cardamom%2C%2043-45%2043rd%20St%2C%20New%20York%2C%20NY",
+    lat: 40.743893,
+    lng: -73.921232
+  },
+  {
+    name: "Tha Phraya",
+    type: "michelin",
+    area: "Manhattan",
+    address: "1553 2nd Ave",
+    note: "Michelin Guide. Moderate spend. Thai contemporary.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tha%20Phraya%2C%201553%202nd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.774541,
+    lng: -73.954546
+  },
+  {
+    name: "Chuan Tian Xia",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "5502 7th Ave",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Chuan%20Tian%20Xia%2C%205502%207th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.639638,
+    lng: -74.009044
+  },
+  {
+    name: "Ly Ly Vietnam Cookhouse",
+    type: "michelin",
+    area: "Manhattan",
+    address: "306 E 81st St",
+    note: "Michelin Guide. Moderate spend. Vietnamese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Ly%20Ly%20Vietnam%20Cookhouse%2C%20306%20E%2081st%20St%2C%20New%20York%2C%20NY",
+    lat: 40.77447,
+    lng: -73.953875
+  },
+  {
+    name: "Cafe Sabarsky",
+    type: "michelin",
+    area: "Manhattan",
+    address: "1048 5th Ave",
+    note: "Michelin Guide. Moderate spend. Austrian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Cafe%20Sabarsky%2C%201048%205th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.781224,
+    lng: -73.960237
+  },
+  {
+    name: "Rolo's",
+    type: "michelin",
+    area: "Queens",
+    address: "853 Onderdonk Ave",
+    note: "Michelin Guide. Moderate spend. American.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Rolo%27s%2C%20853%20Onderdonk%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.701931,
+    lng: -73.903495
+  },
+  {
+    name: "East Harbor Seafood Palace",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "714 65th St",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=East%20Harbor%20Seafood%20Palace%2C%20714%2065th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.633511,
+    lng: -74.014348
+  },
+  {
+    name: "il Gigante",
+    type: "michelin",
+    area: "Queens",
+    address: "880 Woodward Ave",
+    note: "Michelin Guide. Moderate spend. Italian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=il%20Gigante%2C%20880%20Woodward%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.702318,
+    lng: -73.901675
+  },
+  {
+    name: "Pierogi Boys",
+    type: "michelin",
+    area: "Ridgewood",
+    address: "57-34 Catalpa Ave",
+    note: "Michelin Guide. On a budget. Polish.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Pierogi%20Boys%2C%2057-34%20Catalpa%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.701241,
+    lng: -73.902846
+  },
+  {
+    name: "Chick Chick",
+    type: "michelin",
+    area: "Manhattan",
+    address: "618 Amsterdam Ave",
+    note: "Michelin Guide. Moderate spend. Asian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Chick%20Chick%2C%20618%20Amsterdam%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.790223,
+    lng: -73.973394
+  },
+  {
+    name: "Tanoreen",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "7523 3rd Ave",
+    note: "Michelin Guide. Moderate spend. Middle Eastern.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tanoreen%2C%207523%203rd%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.630815,
+    lng: -74.027888
+  },
+  {
+    name: "Yemenat",
+    type: "michelin",
+    area: "Brooklyn",
+    address: "7721 5th Ave",
+    note: "Michelin Guide. On a budget. Middle Eastern.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Yemenat%2C%207721%205th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.627269,
+    lng: -74.023254
+  },
+  {
+    name: "Enoteca Maria",
+    type: "michelin",
+    area: "Staten Island",
+    address: "27 Hyatt St",
+    note: "Michelin Guide. Moderate spend. Italian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Enoteca%20Maria%2C%2027%20Hyatt%20St%2C%20New%20York%2C%20NY",
+    lat: 40.641997,
+    lng: -74.077292
+  },
+  {
+    name: "AbuQir",
+    type: "michelin",
+    area: "Queens",
+    address: "24-19 Steinway St",
+    note: "Michelin Guide. Moderate spend. Seafood.",
+    maps: "https://www.google.com/maps/search/?api=1&query=AbuQir%2C%2024-19%20Steinway%20St%2C%20New%20York%2C%20NY",
+    lat: 40.768475,
+    lng: -73.911061
+  },
+  {
+    name: "Phayul",
+    type: "michelin",
+    area: "Queens",
+    address: "37-59 74th St",
+    note: "Michelin Guide. Moderate spend. Tibetan.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Phayul%2C%2037-59%2074th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.747407,
+    lng: -73.891462
+  },
+  {
+    name: "Zaab Zaab",
+    type: "michelin",
+    area: "Queens",
+    address: "76-04 Woodside Ave",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Zaab%20Zaab%2C%2076-04%20Woodside%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.743301,
+    lng: -73.888653
+  },
+  {
+    name: "Miss Mamie's Spoonbread Too",
+    type: "michelin",
+    area: "Manhattan",
+    address: "366 W 110th St",
+    note: "Michelin Guide. Moderate spend. Southern.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Miss%20Mamie%27s%20Spoonbread%20Too%2C%20366%20W%20110th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.801454,
+    lng: -73.960905
+  },
+  {
+    name: "Taverna Kyclades",
+    type: "michelin",
+    area: "Astoria",
+    address: "36-01 Ditmars Blvd",
+    note: "Michelin Guide. Moderate spend. Greek.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Taverna%20Kyclades%2C%2036-01%20Ditmars%20Blvd%2C%20New%20York%2C%20NY",
+    lat: 40.774361,
+    lng: -73.908082
+  },
+  {
+    name: "Seppe Pizza Bar",
+    type: "michelin",
+    area: "Staten Island",
+    address: "3 Navy Pier Ct",
+    note: "Michelin Guide. Moderate spend. Pizza.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Seppe%20Pizza%20Bar%2C%203%20Navy%20Pier%20Ct%2C%20New%20York%2C%20NY",
+    lat: 40.628915,
+    lng: -74.074362
+  },
+  {
+    name: "Melba's",
+    type: "michelin",
+    area: "Manhattan",
+    address: "300 W 114th St",
+    note: "Michelin Guide. Moderate spend. Southern.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Melba%27s%2C%20300%20W%20114th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.803094,
+    lng: -73.95657
+  },
+  {
+    name: "SaRanRom Thai",
+    type: "michelin",
+    area: "Queens",
+    address: "81-10 Broadway",
+    note: "Michelin Guide. Moderate spend. Thai.",
+    maps: "https://www.google.com/maps/search/?api=1&query=SaRanRom%20Thai%2C%2081-10%20Broadway%2C%20New%20York%2C%20NY",
+    lat: 40.743149,
+    lng: -73.883653
+  },
+  {
+    name: "Lakruwana",
+    type: "michelin",
+    area: "Staten Island",
+    address: "668 Bay St",
+    note: "Michelin Guide. Moderate spend. Sri Lankan.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Lakruwana%2C%20668%20Bay%20St%2C%20New%20York%2C%20NY",
+    lat: 40.625726,
+    lng: -74.075241
+  },
+  {
+    name: "Seis Vecinos",
+    type: "michelin",
+    area: "The Bronx",
+    address: "640 Prospect Ave",
+    note: "Michelin Guide. Moderate spend. Latin American.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Seis%20Vecinos%2C%20640%20Prospect%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.81532,
+    lng: -73.90317
+  },
+  {
+    name: "Caleta 111 Cevicheria",
+    type: "michelin",
+    area: "Queens",
+    address: "111-27 Jamaica Ave",
+    note: "Michelin Guide. Moderate spend. Peruvian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Caleta%20111%20Cevicheria%2C%20111-27%20Jamaica%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.697069,
+    lng: -73.836989
+  },
+  {
+    name: "Asian Jewels",
+    type: "michelin",
+    area: "Queens",
+    address: "133-30 39th Ave",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Asian%20Jewels%2C%20133-30%2039th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.759185,
+    lng: -73.833322
+  },
+  {
+    name: "Jiang Nan",
+    type: "michelin",
+    area: "Queens",
+    address: "133-42 39th Ave",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Jiang%20Nan%2C%20133-42%2039th%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.759237,
+    lng: -73.833556
+  },
+  {
+    name: "Alley 41",
+    type: "michelin",
+    area: "Queens",
+    address: "136-45 41st Ave",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Alley%2041%2C%20136-45%2041st%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.75913,
+    lng: -73.827985
+  },
+  {
+    name: "Tong Sam Gyup Goo Yi",
+    type: "michelin",
+    area: "Queens",
+    address: "162-23 Depot Rd",
+    note: "Michelin Guide. Moderate spend. Korean.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tong%20Sam%20Gyup%20Goo%20Yi%2C%20162-23%20Depot%20Rd%2C%20New%20York%2C%20NY",
+    lat: 40.762059,
+    lng: -73.803198
+  },
+  {
+    name: "Çka Ka Qëllu",
+    type: "michelin",
+    area: "The Bronx",
+    address: "2321 Hughes Ave",
+    note: "Michelin Guide. Moderate spend. Balkan.",
+    maps: "https://www.google.com/maps/search/?api=1&query=%C3%87ka%20Ka%20Q%C3%ABllu%2C%202321%20Hughes%20Ave%2C%20New%20York%2C%20NY",
+    lat: 40.853932,
+    lng: -73.888217
+  },
+  {
+    name: "Tra Di Noi",
+    type: "michelin",
+    area: "The Bronx",
+    address: "622 E 187th St",
+    note: "Michelin Guide. Moderate spend. Italian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Tra%20Di%20Noi%2C%20622%20E%20187th%20St%2C%20New%20York%2C%20NY",
+    lat: 40.855029,
+    lng: -73.886806
+  },
+  {
+    name: "Legend of Taste",
+    type: "michelin",
+    area: "Queens",
+    address: "20-02 Utopia Parkway",
+    note: "Michelin Guide. Moderate spend. Chinese.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Legend%20of%20Taste%2C%2020-02%20Utopia%20Parkway%2C%20New%20York%2C%20NY",
+    lat: 40.779601,
+    lng: -73.794074
+  },
+  {
+    name: "Dubrovnik",
+    type: "michelin",
+    area: "New Rochelle",
+    address: "721 Main St",
+    note: "Michelin Guide. Moderate spend. Croatian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Dubrovnik%2C%20721%20Main%20St%2C%20New%20Rochelle%2C%20NY",
+    lat: 40.903592,
+    lng: -73.789182
+  },
+  {
+    name: "Maria Restaurant",
+    type: "michelin",
+    area: "New Rochelle",
+    address: "11 Huguenot St",
+    note: "Michelin Guide. Moderate spend. Italian.",
+    maps: "https://www.google.com/maps/search/?api=1&query=Maria%20Restaurant%2C%2011%20Huguenot%20St%2C%20New%20Rochelle%2C%20NY",
+    lat: 40.914242,
+    lng: -73.773652
+  },
 ]
 </script>
 <script id="map-data">
@@ -658,6 +1922,7 @@ const TYPE_META = {
   breakfast: { label: "Breakfast", color: "#C47B2B", ink: "#fff" },
   coffee: { label: "Coffee", color: "#6B4226", ink: "#fff" },
   restaurant: { label: "Restaurant", color: "#8E2F3F", ink: "#fff" },
+  michelin: { label: "Michelin", color: "#BE1E2D", ink: "#fff" },
   bar: { label: "Bar", color: "#6E3A6B", ink: "#fff" },
   outdoors: { label: "Outdoors", color: "#2E6B4F", ink: "#fff" },
   museum: { label: "Museum", color: "#314E8E", ink: "#fff" },
@@ -696,6 +1961,7 @@ const ICONS = {
   breakfast: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="13" r="5" fill="none" stroke="#fff" stroke-width="2"/><path d="M12 4v2M6 7l1.4 1.4M18 7l-1.4 1.4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   coffee: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 9h9v5a4 4 0 0 1-4 4H9a3 3 0 0 1-3-3V9z" fill="none" stroke="#fff" stroke-width="2"/><path d="M15 10h2.2a2 2 0 0 1 0 4H15" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   restaurant: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 4v7M6 4v4a2 2 0 0 0 4 0V4M8 11v9M16 4c1.5 2 2 4 2 6s-.8 3-2 3v7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
+  michelin: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 15c1.5 3 4 4.5 7 4.5S17.5 18 19 15M4 13h16" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>',
   outdoors: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 20v-6M8 20h8M12 14l-5-6h10l-5 6zM12 8l-3.2-4h6.4L12 8z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
   museum: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 10h16M6 10v7M10 10v7M14 10v7M18 10v7M5 17h14M12 4l8 4H4l8-4z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>',
   bar: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M8 4h8l-1.2 6.2A2.8 2.8 0 0 1 12 13a2.8 2.8 0 0 1-2.8-2.8L8 4zM12 13v5M9 20h6" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
@@ -724,7 +1990,7 @@ function titleCase(value) {
 function metaFor(type) {
   if (TYPE_META[type]) return TYPE_META[type];
   const known = Object.keys(TYPE_META);
-  const extras = [...new Set(PLACES.map((p) => p.type))].filter((t) => !TYPE_META[t]);
+  const extras = [...new Set(PLACES.flatMap(placeTypes))].filter((t) => !TYPE_META[t]);
   const color = EXTRA_COLORS[extras.indexOf(type) % EXTRA_COLORS.length] || "#44403c";
   return { label: titleCase(type), color, ink: inkFor(color) };
 }
@@ -905,24 +2171,33 @@ if (!window.L) {
     setTimeout(() => { swallowMapClick = false; }, 0);
   }
 
+  function placeTypes(place) {
+    return place.types && place.types.length ? place.types : [place.type];
+  }
+  function displayType(place) {
+    const types = placeTypes(place);
+    if (active !== "all" && types.includes(active)) return active;
+    return place.type;
+  }
   const hashType = decodeURIComponent(location.hash.replace(/^#/, ""));
-  if (hashType && PLACES.some((place) => place.type === hashType)) active = hashType;
+  if (hashType && PLACES.some((place) => placeTypes(place).includes(hashType))) active = hashType;
 
   function typesInUse() {
-    const preferred = ["breakfast", "coffee", "restaurant", "bar", "outdoors", "museum", "books", "show"];
-    const present = [...new Set(PLACES.map((place) => place.type))];
+    const preferred = ["breakfast", "coffee", "restaurant", "michelin", "bar", "outdoors", "museum", "books", "show"];
+    const present = [...new Set(PLACES.flatMap(placeTypes))];
     return preferred.filter((type) => present.includes(type))
       .concat(present.filter((type) => !preferred.includes(type)).sort());
   }
   function matches(place) {
-    return active === "all" || place.type === active;
+    return active === "all" || placeTypes(place).includes(active);
   }
   function visiblePlaces() {
     return PLACES.filter(matches);
   }
   function pinIcon(place, on) {
-    const meta = metaFor(place.type);
-    const icon = ICONS[place.type] || ICONS.museum;
+    const type = displayType(place);
+    const meta = metaFor(type);
+    const icon = ICONS[type] || ICONS.museum;
     return L.divIcon({
       className: "pin-icon",
       html: `<div class="pin${on ? " is-on" : ""}" style="--pin:${meta.color}">${icon}</div>`,
@@ -1009,7 +2284,10 @@ if (!window.L) {
     spotsBtn.setAttribute("aria-expanded", listMode ? "true" : "false");
   }
   function placeHtml(place) {
-    const meta = metaFor(place.type);
+    const meta = metaFor(displayType(place));
+    const maps = place.maps
+      ? `<p class="maps"><a href="${escapeHtml(place.maps)}" target="_blank" rel="noopener">Google Maps</a></p>`
+      : "";
     return `
       <div class="sheet-top">
         <div>
@@ -1020,12 +2298,13 @@ if (!window.L) {
       <p class="area">${escapeHtml(place.area)}</p>
       <p class="note">${escapeHtml(place.note)}</p>
       <p class="addr">${escapeHtml(place.address)}</p>
+      ${maps}
       <button type="button" class="close-bar" data-close>Close</button>`;
   }
   function openPlace(id, fly) {
     const place = PLACES[id];
     if (!place) return;
-    if (active !== "all" && place.type !== active) setFilter(place.type);
+    if (active !== "all" && !placeTypes(place).includes(active)) setFilter(place.type);
     selected = id;
     renderPins();
     showSheet("place", placeHtml(place));
@@ -1058,7 +2337,7 @@ if (!window.L) {
     const heading = active === "all" ? "All spots" : metaFor(active).label;
     const items = rows.map((place) => {
       const id = PLACES.indexOf(place);
-      const meta = metaFor(place.type);
+      const meta = metaFor(displayType(place));
       return `<li><button type="button" data-open="${id}">
         <span class="mark" style="--c:${meta.color}"></span>
         <span class="name">${escapeHtml(place.name)}</span>
