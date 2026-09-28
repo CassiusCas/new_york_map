@@ -37,6 +37,7 @@ Use an existing category when it already fits:
 | `michelin` | Michelin | Michelin Guide restaurants the user asked to file under Michelin. |
 | `bar` | Bar | Bars and rooftop drinks. |
 | `outdoors` | Outdoors | Parks, ferries, streets, and outdoor walks. |
+| `gardens` | Gardens | Rooftop parks, green roofs, and landscaped terraces. |
 | `museum` | Museum | Museums and exhibitions. |
 | `books` | Books | Bookstores and reading rooms. |
 | `show` | Shows | Performances, tapings, galleries, and ticket booths. |
