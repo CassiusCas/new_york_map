@@ -16,7 +16,7 @@ If the page is blank, the browser blocked the map library. Open the file again o
 
 ## Filter
 
-The chips across the top filter the pins by activity: breakfast, coffee, restaurant, outdoors, and museum. **Spots** opens the same list. **Lines** opens the subway color key. **Neighborhoods** shows or hides the Manhattan neighborhood areas. Tap the title to zoom back out to the whole city.
+The search box narrows the pins by name, neighborhood, street address, the note, and the activity name. “Williamsburg” keeps spots in that neighborhood. “Italian” or “Japanese” keeps spots whose note or activity says that. Every word has to appear. The chips still filter by activity — breakfast, coffee, restaurant, outdoors, and museum — and they combine with the search, so restaurant plus “pasta” shows pasta restaurants. **Spots** opens the same narrowed list. **Lines** opens the subway color key. **Neighborhoods** shows or hides the Manhattan neighborhood areas. Tap the title to zoom back out to the whole city.
 
 ## Add your own places
 
