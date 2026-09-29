@@ -16,7 +16,7 @@ If the page is blank, the browser blocked the map library. Open the file again o
 
 ## Filter
 
-The chips across the top filter the pins: coffee, restaurant, Michelin, bar, outdoors, rooftop garden, gardens, parks, museum, books, and shows. Michelin pins are the Guide's Bib Gourmand and Selected restaurants at on-a-budget and moderate spend, and each popup includes a Google Maps link. **Spots** opens the same list. **Lines** opens the subway color key. **Neighborhoods** shows or hides the Manhattan neighborhood areas. Tap the title to zoom back out to the whole city.
+The search box narrows the pins by name, neighborhood, street address, the note, and the activity name. “Williamsburg” keeps spots in that neighborhood. “Japanese” keeps spots whose note or activity says that. Every word has to appear. The chips still filter by activity — coffee, restaurant, Michelin, bar, outdoors, rooftop garden, gardens, parks, museum, books, and shows — and they combine with the search. Michelin pins are the Guide's Bib Gourmand and Selected restaurants at on-a-budget and moderate spend, and each popup includes a Google Maps link. **Spots** opens the same narrowed list. **Lines** opens the subway color key. **Neighborhoods** shows or hides the Manhattan neighborhood areas. Tap the title to zoom back out to the whole city.
 
 ## Add your own places
 
