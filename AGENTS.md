@@ -33,6 +33,7 @@ Use an existing category when it already fits:
 | --- | --- | --- |
 | `breakfast` | Breakfast | Breakfast spots. The chip stays hidden until a place uses it. |
 | `coffee` | Coffee | Coffee and tea shops. |
+| `bakery` | Bakery | Bakeries, pastry shops, and bread shops. |
 | `restaurant` | Restaurant | Places to eat that are not in another food category. |
 | `michelin` | Michelin | Michelin Guide restaurants the user asked to file under Michelin. |
 | `bar` | Bar | Bars and rooftop drinks. |
